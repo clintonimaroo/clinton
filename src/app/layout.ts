@@ -58,7 +58,7 @@ export class Layout {
     <div class="container">
         <header>
             <h1>Clinton Imaro</h1>
-            <p class="subtitle">@clintimaro · dev</p>
+            <p class="subtitle">@clintimaro · ml, infra & product</p>
         </header>
 
         ${content}
