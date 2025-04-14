@@ -87,7 +87,7 @@ export class Page {
   <h2 id="connect">connect</h2>
   <div class="contact">
     <p>contact me on 
-      <a href="https://twitter.com/clintimaro" aria-label="Clinton's Twitter profile" rel="noopener">Twitter</a> 
+      <a href="https://twitter.com/clintimaroo" aria-label="Clinton's Twitter profile" rel="noopener">Twitter</a> 
       <a href="https://github.com/clintonimaroo" aria-label="Clinton's GitHub profile" rel="noopener">GitHub</a> 
       <a href="https://linkedin.com/in/clintonimaro" aria-label="Clinton's LinkedIn profile" rel="noopener">LinkedIn</a> 
       - or send me an email at 
