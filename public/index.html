@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Clinton Imaro - Senior Software Engineer specializing in web development and innovative technologies">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Clinton Imaro - Senior Software Engineer</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Clinton Imaro</h1>
+            <p class="subtitle">@clintimaro · dev</p>
+        </header>
+
+        <section>
+            <p>I'm a senior software engineer passionate about user interfaces and innovative technologies. Exploring design and crafting thoughtful interactions. Obsessed with the small details, while mastering the web one step at a time.</p>
+        </section>
+
+        <section>
+            <h2 id="experiments">experiments</h2>
+            <p>Interactive experiments and projects exploring the intersection of design and technology.</p>
+            
+            <div class="project">
+                <h3>
+                    <a href="#" aria-label="Portfolio project">Portfolio</a>
+                    <span class="year">2025</span>
+                </h3>
+                <p>A minimalist personal website built with NestJS, showcasing my work and expertise as a software engineer.</p>
+            </div>
+            
+            <div class="project">
+                <h3>
+                    <a href="#" aria-label="AI Chat Interface project">AI Chat Interface</a>
+                    <span class="year">2025</span>
+                </h3>
+                <p>A mini version of a conversational AI interface. Built with React and modern language models.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="blog">blog</h2>
+            <p>I blog about things I'm learning, my experiences and thoughts on design and technology.</p>
+            
+            <div class="blog-post">
+                <a href="#" aria-label="Read blog post: Modern Web Development">Modern Web Development</a>
+                <span class="views">139 views · Mar 31, 2025</span>
+            </div>
+            
+            <div class="blog-post">
+                <a href="#" aria-label="Read blog post: Building with NestJS">Building with NestJS</a>
+                <span class="views">1059 views · Mar 21, 2025</span>
+            </div>
+            
+            <div class="blog-post">
+                <a href="#" aria-label="Read blog post: begin">begin.</a>
+                <span class="views">411 views · Jan 16, 2025</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="notes">notes</h2>
+            <p>Quick thoughts, ideas, and snippets I want to remember.</p>
+            
+            <div class="note">
+                <h3>minimalism</h3>
+                <p>Sometimes less is more. The elegance of minimalism in design speaks volumes.</p>
+                <p class="date">Mar 21, 2025</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="connect">connect</h2>
+            <div class="contact">
+                <p>contact me on 
+                    <a href="#" aria-label="Clinton's X profile">X</a> 
+                    <a href="#" aria-label="Clinton's GitHub profile">GitHub</a> 
+                    <a href="#" aria-label="Clinton's LinkedIn profile">LinkedIn</a> 
+                    - or send me an email at 
+                    <a href="mailto:contact@clintonimaro.com">contact@clintonimaro.com</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p class="colophon">This site is built with NestJS, TypeScript, and SCSS. Designed with minimalism and performance in mind.</p>
+                <p class="copyright">© 2025 Clinton Imaro</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple touch optimization 
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add active state for touch devices
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('touchstart', function() {
+                    this.classList.add('active-touch');
+                }, {passive: true});
+                
+                link.addEventListener('touchend', function() {
+                    this.classList.remove('active-touch');
+                }, {passive: true});
+            });
+        });
+    </script>
+</body>
+</html> 
