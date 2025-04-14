@@ -91,7 +91,7 @@ export class Page {
       <a href="https://github.com/clintonimaroo" aria-label="Clinton's GitHub profile" rel="noopener">GitHub</a> 
       <a href="https://linkedin.com/in/clintonimaro" aria-label="Clinton's LinkedIn profile" rel="noopener">LinkedIn</a> 
       - or send me an email at 
-      <a href="mailto:contact@clintonimaro.com">contact@clintonimaro.com</a>
+      <a href="mailto:hi@clintonimaro.com">hi@clintonimaro.com</a>
     </p>
   </div>
 </section>`;
