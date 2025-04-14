@@ -4,6 +4,10 @@
     {
       "src": "src/main.ts",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -12,22 +16,13 @@
       "dest": "/public/styles/$1"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/public/robots.txt"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/public/sitemap.xml"
+      "src": "/(favicon.ico|robots.txt|sitemap.xml)",
+      "dest": "/public/$1"
     },
     {
       "src": "/(.*)",
       "dest": "/src/main.ts"
     }
   ],
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --legacy-peer-deps"
+  "installCommand": "npm install --omit=dev"
 } 
