@@ -22,7 +22,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "scss": "sass src/app/styles/globals.scss:public/styles/main.css",
     "scss:watch": "sass --watch src/app/styles/globals.scss:public/styles/main.css",
-    "vercel-build": "npm run build"
+    "vercel-build": "npm run build",
+    "vercel": "vercel dev"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
