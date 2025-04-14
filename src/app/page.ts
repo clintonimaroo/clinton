@@ -7,11 +7,32 @@ export class Page {
 
   render(): string {
     const content = `<section>
-  <p>I'm a senior software engineer passionate about user interfaces and innovative technologies. Exploring design and crafting thoughtful interactions. Obsessed with the small details, while mastering the web one step at a time.</p>
+  <p class="bio">I'm a senior software engineer based in San Francisco Bay Area, passionate about user interfaces and innovative technologies. Self-motivated, resilient, and highly talented technology professional with expertise in software engineering, web development, and tech leadership. I enjoy bringing ideas to life with coding and I'm always on the lookout for new skills to pick up.</p>
 </section>
 
 <section>
-  <h2 id="experiments">experiments</h2>
+  <h2 id="experience">experience</h2>
+  <p>Software Engineer & Global Speaker with a track record of building impactful tech solutions.</p>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="Code Space role">Code Space</a>
+      <span class="year">2023-Present</span>
+    </h3>
+    <p>Leading software engineering initiatives and mentoring junior developers in web technologies and architecture design.</p>
+  </div>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="Previous tech company">Tech Innovations Inc</a>
+      <span class="year">2020-2023</span>
+    </h3>
+    <p>Developed full-stack solutions using modern frameworks and contributed to open source projects.</p>
+  </div>
+</section>
+
+<section>
+  <h2 id="projects">projects</h2>
   <p>Interactive experiments and projects exploring the intersection of design and technology.</p>
   
   <div class="project">
@@ -32,33 +53,33 @@ export class Page {
 </section>
 
 <section>
-  <h2 id="blog">blog</h2>
-  <p>I blog about things I'm learning, my experiences and thoughts on design and technology.</p>
+  <h2 id="speaking">speaking</h2>
+  <p>Sharing knowledge and insights at tech conferences and events worldwide.</p>
   
   <div class="blog-post">
-    <a href="#" aria-label="Read blog post: Modern Web Development">Modern Web Development</a>
-    <span class="views">139 views · Mar 31, 2025</span>
+    <a href="#" aria-label="Conference talk: Modern Web Development">Modern Web Development: Best Practices</a>
+    <span class="views">TechConf 2025 · San Francisco</span>
   </div>
   
   <div class="blog-post">
-    <a href="#" aria-label="Read blog post: Building with NestJS">Building with NestJS</a>
-    <span class="views">1059 views · Mar 21, 2025</span>
+    <a href="#" aria-label="Conference talk: Building with NestJS">Building Enterprise Applications with NestJS</a>
+    <span class="views">WebDevCon · New York, 2024</span>
   </div>
   
   <div class="blog-post">
-    <a href="#" aria-label="Read blog post: begin">begin.</a>
-    <span class="views">411 views · Jan 16, 2025</span>
+    <a href="#" aria-label="Conference talk: Getting Started">Getting Started in Tech: A Journey</a>
+    <span class="views">NextGen Tech Summit · Virtual, 2023</span>
   </div>
 </section>
 
 <section>
-  <h2 id="notes">notes</h2>
-  <p>Quick thoughts, ideas, and snippets I want to remember.</p>
+  <h2 id="education">education</h2>
+  <p>Academic background that forms the foundation of my technical expertise.</p>
   
   <div class="note">
-    <h3>minimalism</h3>
-    <p>Sometimes less is more. The elegance of minimalism in design speaks volumes.</p>
-    <p class="date">Mar 21, 2025</p>
+    <h3>Morgan State University</h3>
+    <p>Bachelor of Science in Computer Science with focus on Software Engineering</p>
+    <p class="date">2016-2020</p>
   </div>
 </section>
 
@@ -66,9 +87,9 @@ export class Page {
   <h2 id="connect">connect</h2>
   <div class="contact">
     <p>contact me on 
-      <a href="#" aria-label="Clinton's X profile">X</a> 
-      <a href="#" aria-label="Clinton's GitHub profile">GitHub</a> 
-      <a href="#" aria-label="Clinton's LinkedIn profile">LinkedIn</a> 
+      <a href="https://twitter.com/clintimaro" aria-label="Clinton's Twitter profile" rel="noopener">Twitter</a> 
+      <a href="https://github.com/clintonimaroo" aria-label="Clinton's GitHub profile" rel="noopener">GitHub</a> 
+      <a href="https://linkedin.com/in/clintonimaro" aria-label="Clinton's LinkedIn profile" rel="noopener">LinkedIn</a> 
       - or send me an email at 
       <a href="mailto:contact@clintonimaro.com">contact@clintonimaro.com</a>
     </p>
