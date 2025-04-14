@@ -258,6 +258,27 @@ footer .footer-content {
   flex-direction: column;
   gap: 15px;
 }
+footer .footer-info {
+  margin-bottom: 15px;
+}
+footer .footer-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+footer .footer-links a {
+  margin-right: 0;
+  color: var(--text-secondary);
+  border-bottom: none;
+}
+footer .footer-links a:hover {
+  color: var(--link-hover);
+}
+footer .site-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
 footer .colophon {
   color: var(--text-secondary);
   font-size: 0.875rem;
@@ -265,7 +286,7 @@ footer .colophon {
 footer .copyright {
   color: var(--text-secondary);
   font-size: 0.875rem;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 /* Ensure proper orientation changes */
