@@ -16,18 +16,34 @@ export class Page {
   
   <div class="project">
     <h3>
-      <a href="#" aria-label="Code Space role">Code Space</a>
-      <span class="year">2023-Present</span>
+      <a href="#" aria-label="Apple role">core ml @apple</a>
+      <span class="year">2023</span>
     </h3>
-    <p>Leading software engineering initiatives and mentoring junior developers in web technologies and architecture design.</p>
+    <p>Enhanced Siri's intent classification as an ML Engineer Intern, making it smarter and more intuitive.</p>
   </div>
   
   <div class="project">
     <h3>
-      <a href="#" aria-label="Previous tech company">Tech Innovations Inc</a>
-      <span class="year">2020-2023</span>
+      <a href="#" aria-label="Microsoft role">cloud engineering @microsoft</a>
+      <span class="year">2022</span>
     </h3>
-    <p>Developed full-stack solutions using modern frameworks and contributed to open source projects.</p>
+    <p>Optimized Azure cloud infrastructure, automated deployments, and improved scalability.</p>
+  </div>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="Code Space role">founder @code space</a>
+      <span class="year">2021-Present</span>
+    </h3>
+    <p>Built a 10k+ strong Gen Z tech community in Africa, driving innovation and opportunity through events like Spacer's Hack Fest.</p>
+  </div>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="HoGent role">researcher @hogent</a>
+      <span class="year">2022</span>
+    </h3>
+    <p>Conducted academic research in technology and innovation.</p>
   </div>
 </section>
 
@@ -49,6 +65,27 @@ export class Page {
       <span class="year">2025</span>
     </h3>
     <p>A mini version of a conversational AI interface. Built with React and modern language models.</p>
+  </div>
+</section>
+
+<section>
+  <h2 id="research">research</h2>
+  <p>Contributing to academic and industry research in emerging technologies.</p>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="TUIST Lab Research">research @tuist lab</a>
+      <span class="year">2023</span>
+    </h3>
+    <p>Investigated security in automated mobility systems with ML infra, supervised by Dr. Zulqarnain Khattak.</p>
+  </div>
+  
+  <div class="project">
+    <h3>
+      <a href="#" aria-label="CEAMLS Research">research @ceamls</a>
+      <span class="year">2022</span>
+    </h3>
+    <p>Developed AI-driven autonomous control and resilient comms for UAVs, supervised by Dr. Peter Taiwo.</p>
   </div>
 </section>
 
