@@ -1,0 +1,215 @@
+'use client'
+
+import { useEffect } from 'react'
+import Footer from './components/Footer'
+
+export default function Home() {
+  useEffect(() => {
+    const links = document.querySelectorAll('a')
+    links.forEach((link) => {
+      link.addEventListener(
+        'touchstart',
+        function () {
+          this.classList.add('active-touch')
+        },
+        { passive: true }
+      )
+
+      link.addEventListener(
+        'touchend',
+        function () {
+          this.classList.remove('active-touch')
+        },
+        { passive: true }
+      )
+    })
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener('touchstart', () => {})
+        link.removeEventListener('touchend', () => {})
+      })
+    }
+  }, [])
+
+  return (
+    <div className="container">
+      <header>
+        <h1>Clinton Imaro</h1>
+        <p className="subtitle">@clintonimaro · ml, infra & product</p>
+      </header>
+
+      <section>
+        <p>
+          Clinton Imaro is a Software Engineer, Sessional Blockchain Developer & Cloud Engineer, They loves creating
+          things for others, as an Software Engineer. Clinton is also a founding member ( founder ) of{' '}
+          <a href="https://www.codespaces.org/" target="_blank" rel="noopener">
+            Code Space
+          </a>
+          , a nonprofit community that aims to spread knowledge about tech & connecting Gen Z-s into the global tech
+          scene.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="experience">experience</h2>
+        <p>Software Engineer & Global Speaker with a track record of building impactful tech solutions.</p>
+
+        <div className="project">
+          <h3>
+            <a href="https://www.apple.com/" aria-label="Apple role" target="_blank" rel="noopener">
+              core ml @apple
+            </a>
+            <span className="year">2024</span>
+          </h3>
+          <p>
+            Enhanced Siri&apos;s intent classification as an ML Engineer Intern, focusing on complex query handling and
+            model fine-tuning to make interactions more intuitive.
+          </p>
+        </div>
+
+        <div className="project">
+          <h3>
+            <a href="https://www.microsoft.com/en-us/" aria-label="Microsoft role" target="_blank" rel="noopener">
+              cloud engineering @microsoft
+            </a>
+            <span className="year">2023</span>
+          </h3>
+          <p>
+            Optimized Azure cloud infrastructure for scalability and performance, implementing automated deployment
+            pipelines and improving resource allocation efficiency.
+          </p>
+        </div>
+
+        <div className="project">
+          <h3>
+            <a href="https://www.codespaces.org/" aria-label="Code Space role" target="_blank" rel="noopener">
+              founder @code space
+            </a>
+            <span className="year">2021-Present</span>
+          </h3>
+          <p>
+            Code Space is a dynamic community that connects, educates, and offers opportunities to Gen Z developers and
+            tech enthusiasts across Africa. Recognizing the continent&apos;s large population of unemployed youth, we
+            are connecting African Gen Zs for Growth, Impact, and Success. Since our inception in 2021, Code Space has
+            been a pivotal community for over 10k+ young tech talents, driving innovation through hackathons and tech
+            events.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="research">research</h2>
+        <p>Contributing to academic and industry research in emerging technologies.</p>
+
+        <div className="project">
+          <h3>
+            <a href="#" aria-label="MSU Research">
+              research @msu 🐻
+            </a>
+            <span className="year">2025</span>
+          </h3>
+          <p>
+            Conducting research on security issues within automated mobility systems using ML computing infrastructure
+            at the{' '}
+            <a href="https://www.morgan.edu/soe/transportation" target="_blank" rel="noopener">
+              Transportation and Urban Infrastructure Studies Research Lab
+            </a>
+            , under the supervision of{' '}
+            <a href="https://zkhattak.weebly.com/" target="_blank" rel="noopener">
+              Dr. Zulqarnain Khattak
+            </a>
+            . This work focuses on identifying and mitigating vulnerabilities in smart transportation networks.
+          </p>
+        </div>
+
+        <div className="project">
+          <h3>
+            <a href="#" aria-label="CEAMLS Research">
+              research @ceamls
+            </a>
+            <span className="year">2025</span>
+          </h3>
+          <p>
+            Conducting research on AI-driven autonomous control systems for equitable, decentralized, and
+            disaster-resilient communication networks at the{' '}
+            <a href="https://www.morgan.edu/ceamls" target="_blank" rel="noopener">
+              Center for Equitable Artificial Intelligence and Machine Learning Systems (CEAMLS)
+            </a>{' '}
+            Research Lab. Under the supervision of{' '}
+            <a href="https://ieeexplore.ieee.org/author/37086069468" target="_blank" rel="noopener">
+              Dr. Peter Taiwo
+            </a>
+            , I&apos;m also building simulation frameworks for UAV communications in challenging environments.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="blog">blog</h2>
+        <p>I blog about things I&apos;m learning, my experiences and thoughts on design and technology.</p>
+
+        <div className="blog-post">
+          <a
+            href="https://www.codespaces.org/blog/678afc9ff2541c9b44ce706e"
+            aria-label="Read blog post: A New Year, A new beginning for everyone"
+            target="_blank"
+            rel="noopener"
+          >
+            A New Year, A new beginning for everyone
+          </a>
+          <span className="views">223 views · Jan 18, 2025</span>
+        </div>
+
+        <div className="blog-post">
+          <a
+            href="https://blog.clintonimaro.com/the-year-i-turned-20"
+            aria-label="Read blog post: The year i turned 20"
+            target="_blank"
+            rel="noopener"
+          >
+            The year i turned 20
+          </a>
+          <span className="views">411 views · Jun 25, 2024</span>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="notes">notes</h2>
+        <p>Quick thoughts, ideas, and snippets I want to remember.</p>
+
+        <div className="note">
+          <h3>aspirations</h3>
+          <p>Don&apos;t let anybody tell you what your dream should be</p>
+          <p className="date">Mar 31, 2025</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="connect">connect</h2>
+        <div className="contact">
+          <p>
+            contact me on{' '}
+            <a href="https://x.com/clintonimaroo" aria-label="Clinton's X profile" target="_blank" rel="noopener">
+              X
+            </a>{' '}
+            <a href="https://github.com/clintonimaroo" aria-label="Clinton's GitHub profile" target="_blank" rel="noopener">
+              GitHub
+            </a>{' '}
+            <a
+              href="https://www.linkedin.com/in/clintonimaro/"
+              aria-label="Clinton's LinkedIn profile"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>{' '}
+            - or send me an email at <a href="mailto:hi@clintonimaro.com">hi@clintonimaro.com</a>
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+}
