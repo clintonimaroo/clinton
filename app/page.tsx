@@ -96,6 +96,18 @@ export default function Home() {
             events.
           </p>
         </div>
+
+        <div style={{ marginTop: '20px' }}>
+          <a
+            href="https://www.linkedin.com/in/clintonimaro/"
+            aria-label="View more experience on LinkedIn"
+            target="_blank"
+            rel="noopener"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}
+          >
+            see more <span>→</span>
+          </a>
+        </div>
       </section>
 
       <section>
