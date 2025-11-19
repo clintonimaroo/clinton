@@ -41,7 +41,7 @@ export default function Home() {
 
       <section>
         <p>
-          Clinton Imaro is a Software Engineer, Sessional Blockchain Developer & Cloud Engineer, They loves creating
+          Clinton Imaro is a Software Engineer who loves creating
           things for others, as an Software Engineer. Clinton is also a founding member ( founder ) of{' '}
           <a href="https://www.codespaces.org/" target="_blank" rel="noopener">
             Code Space
@@ -68,18 +68,6 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="project">
-          <h3>
-            <a href="https://www.microsoft.com/en-us/" aria-label="Microsoft role" target="_blank" rel="noopener">
-              cloud engineering @microsoft
-            </a>
-            <span className="year">2023</span>
-          </h3>
-          <p>
-            Optimized Azure cloud infrastructure for scalability and performance, implementing automated deployment
-            pipelines and improving resource allocation efficiency.
-          </p>
-        </div>
 
         <div className="project">
           <h3>

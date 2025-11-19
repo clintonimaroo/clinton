@@ -41,7 +41,7 @@ export default function About() {
 
       <section>
         <p>
-          I&apos;m a Software Engineer, ML Engineer, and Cloud Engineer passionate about building impactful technology
+          I&apos;m a Software Engineer and ML Engineer passionate about building impactful technology
           solutions and empowering the next generation of developers. My journey in tech has taken me from founding
           communities to working at some of the world&apos;s leading technology companies.
         </p>
@@ -51,8 +51,7 @@ export default function About() {
         <h2 id="background">background</h2>
         <p>
           My passion for technology started early, driven by curiosity and a desire to solve real-world problems. Over
-          the years, I&apos;ve developed expertise across multiple domains—from machine learning and cloud infrastructure
-          to blockchain development and software engineering.
+          the years, I&apos;ve developed expertise across multiple domains—from machine learning to software engineering.
         </p>
 
         <div className="project">
@@ -102,17 +101,6 @@ export default function About() {
           </p>
         </div>
 
-        <div className="project">
-          <h3>
-            <span>cloud engineering @ microsoft</span>
-            <span className="year">2023</span>
-          </h3>
-          <p>
-            At Microsoft, I optimized Azure cloud infrastructure for scalability and performance, implementing automated
-            deployment pipelines and improving resource allocation efficiency. This role taught me the importance of
-            infrastructure as code and cloud-native architectures.
-          </p>
-        </div>
 
         <div className="project">
           <h3>

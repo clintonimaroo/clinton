@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import './styles/globals.scss'
 
 export const metadata: Metadata = {
-  title: 'Clinton Imaro - Software Engineer, ML Engineer & Cloud Engineer',
-  description: 'Clinton Imaro is a Software Engineer, Sessional Blockchain Developer & Cloud Engineer. Founding member of Code Space, a nonprofit community connecting Gen Z developers across Africa. Currently conducting research at Morgan State University on ML computing infrastructure and AI-driven autonomous systems.',
-  keywords: 'Clinton Imaro, Software Engineer, ML Engineer, Cloud Engineer, Blockchain Developer, Code Space, Morgan State University, Tech Speaker, Software Engineering, Machine Learning, Cloud Computing',
+  title: 'Clinton Imaro - Software Engineer & ML Engineer',
+  description: 'Clinton Imaro (born June 26, 2004) is a Nigerian Software Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding Code Space, a nonprofit community with 10,000+ members that organizes one of Nigeria\'s largest annual hackathons.',
+  keywords: 'Clinton Imaro, Software Engineer, ML Engineer, Code Space, Morgan State University, Tech Speaker, Software Engineering, Machine Learning',
   authors: [{ name: 'Clinton Imaro' }],
   openGraph: {
-    title: 'Clinton Imaro - Software Engineer, ML Engineer & Cloud Engineer',
-    description: 'Software Engineer, Sessional Blockchain Developer & Cloud Engineer. Founding member of Code Space. Research at Morgan State University on ML computing infrastructure.',
+    title: 'Clinton Imaro - Software Engineer & ML Engineer',
+    description: 'Nigerian Software Engineer, founder, and speaker. Founder of Code Space (10,000+ members). Currently pursuing Bachelor\'s in Computer Science (Interactive Intelligence) at Morgan State University.',
     images: [
       {
         url: 'https://clintonimaro.com/images/profile.jpg',
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    creator: '@clintonimaroo',
-    site: '@clintonimaroo',
-    title: 'Clinton Imaro - Software Engineer, ML Engineer & Cloud Engineer',
-    description: 'Software Engineer, Sessional Blockchain Developer & Cloud Engineer. Founding member of Code Space.',
+    creator: '@clintonimaro',
+    site: '@clintonimaro',
+    title: 'Clinton Imaro - Software Engineer & ML Engineer',
+    description: 'Nigerian Software Engineer, founder, and speaker. Founder of Code Space (10,000+ members).',
     images: ['https://clintonimaro.com/images/profile.jpg'],
   },
   alternates: {
@@ -102,30 +102,32 @@ export default function RootLayout({
               sameAs: [
                 'https://github.com/clintonimaroo',
                 'https://linkedin.com/in/clintonimaro',
-                'https://x.com/clintonimaroo',
-                'https://twitter.com/clintonimaroo',
+                'https://x.com/clintonimaro',
+                'https://www.instagram.com/clintonimaro/',
                 'https://blog.clintonimaro.com',
                 'https://www.codespaces.org',
               ],
-              jobTitle: ['Software Engineer', 'ML Engineer', 'Cloud Engineer', 'Blockchain Developer'],
+              jobTitle: ['Software Engineer', 'ML Engineer'],
               description:
-                'Clinton Imaro is a Software Engineer, Sessional Blockchain Developer & Cloud Engineer. Founding member of Code Space, a nonprofit community connecting Gen Z developers across Africa. Currently conducting research at Morgan State University on ML computing infrastructure and AI-driven autonomous systems.',
-              knowsAbout: [
-                'Software Engineering',
-                'Machine Learning',
-                'Cloud Computing',
-                'Blockchain Development',
-                'Web Development',
-                'AI Systems',
-                'Autonomous Systems',
-              ],
+                'Clinton Imaro (born June 26, 2004) is a Nigerian Software Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding the non-profit community Code Space, which has grown to 10,000+ members and organizes one of Nigeria\'s largest annual hackathons with 1,000+ attendees.',
+              birthDate: '2004-06-26',
+              birthPlace: {
+                '@type': 'Place',
+                name: 'Benin City',
+                addressRegion: 'Edo State',
+                addressCountry: 'Nigeria',
+              },
               worksFor: [
                 {
                   '@type': 'Organization',
                   name: 'Code Space',
                   url: 'https://www.codespaces.org',
-                  description: 'A nonprofit community connecting Gen Z developers across Africa',
+                  description: 'A nonprofit community connecting Gen Z developers across Africa. Code Space has grown to 10,000+ members and organizes one of Nigeria\'s largest annual hackathons with 1,000+ attendees.',
                   foundingDate: '2021',
+                  numberOfEmployees: {
+                    '@type': 'QuantitativeValue',
+                    value: '10000+',
+                  },
                 },
                 {
                   '@type': 'Organization',
@@ -134,23 +136,30 @@ export default function RootLayout({
                   jobTitle: 'ML Engineer',
                   startDate: '2024',
                 },
+              ],
+              alumniOf: [
                 {
-                  '@type': 'Organization',
-                  name: 'Microsoft',
-                  url: 'https://www.microsoft.com',
-                  jobTitle: 'Cloud Engineer',
-                  startDate: '2023',
+                  '@type': 'CollegeOrUniversity',
+                  name: 'Morgan State University',
+                  url: 'https://www.morgan.edu',
+                  department: {
+                    '@type': 'Organization',
+                    name: 'Computer Science - Interactive Intelligence',
+                  },
+                },
+                {
+                  '@type': 'CollegeOrUniversity',
+                  name: 'Hogent',
+                  addressCountry: 'Belgium',
+                },
+                {
+                  '@type': 'School',
+                  name: 'Light of Day',
+                  addressLocality: 'Kubwa',
+                  addressRegion: 'Abuja',
+                  addressCountry: 'Nigeria',
                 },
               ],
-              alumniOf: {
-                '@type': 'CollegeOrUniversity',
-                name: 'Morgan State University',
-                url: 'https://www.morgan.edu',
-                department: {
-                  '@type': 'Organization',
-                  name: 'Transportation and Urban Infrastructure Studies Research Lab',
-                },
-              },
               memberOf: [
                 {
                   '@type': 'Organization',
@@ -159,10 +168,37 @@ export default function RootLayout({
                   startDate: '2021',
                 },
               ],
+              knowsAbout: [
+                'Software Engineering',
+                'Machine Learning',
+                'Cloud Computing',
+                'Web Development',
+                'AI Systems',
+                'Autonomous Systems',
+                'Interactive Intelligence',
+                'Team Building',
+                'Community Building',
+              ],
+              award: 'Founder of Code Space - 10,000+ member community',
+              hasOccupation: {
+                '@type': 'Occupation',
+                name: 'Software Engineer',
+                occupationLocation: {
+                  '@type': 'Country',
+                  name: 'United States',
+                },
+                skills: 'AI, Machine Learning, Software Engineering',
+              },
               knowsLanguage: ['English'],
               nationality: {
                 '@type': 'Country',
-                name: 'United States',
+                name: 'Nigeria',
+              },
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Baltimore',
+                addressRegion: 'Maryland',
+                addressCountry: 'United States',
               },
             }),
           }}
