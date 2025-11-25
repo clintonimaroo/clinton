@@ -3,7 +3,7 @@ import './styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro - Software Engineer & ML Engineer',
-  description: 'Clinton Imaro (born June 26, 2004) is a Nigerian Software Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding Code Space, a nonprofit community with 10,000+ members that organizes one of Nigeria\'s largest annual hackathons.',
+  description: 'Clinton Imaro is a Nigerian Software Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding Code Space, a nonprofit community with 10,000+ members that organizes one of Nigeria\'s largest annual hackathons.',
   keywords: 'Clinton Imaro, Software Engineer, ML Engineer, Code Space, Morgan State University, Tech Speaker, Software Engineering, Machine Learning',
   authors: [{ name: 'Clinton Imaro' }],
   openGraph: {
@@ -109,7 +109,7 @@ export default function RootLayout({
               ],
               jobTitle: ['Software Engineer', 'ML Engineer'],
               description:
-                'Clinton Imaro (born June 26, 2004) is a Nigerian Software Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding the non-profit community Code Space, which has grown to 10,000+ members and organizes one of Nigeria\'s largest annual hackathons with 1,000+ attendees.',
+                'Clinton Imaro is a Software Engineer and ML Engineer, founder, and speaker with extensive experience in building and managing teams. Known for his work with major tech companies and for founding the non-profit community Code Space, which has grown to 10,000+ members and organizes one of Nigeria\'s largest annual hackathons with 1,000+ attendees.',
               birthDate: '2004-06-26',
               birthPlace: {
                 '@type': 'Place',
