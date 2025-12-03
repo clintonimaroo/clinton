@@ -41,13 +41,21 @@ export default function Home() {
 
       <section>
         <p>
-          Clinton Imaro is a Software Engineer who loves creating
-          things for others, as an Software Engineer. Clinton is also a founding member ( founder ) of{' '}
+          Clinton Imaro is a multifaceted leader, software engineer, speaker, and entrepreneur with a decade of
+          experience building and backing technology ventures in frontier markets.
+        </p>
+        <p>
+          He co-founded{' '}
           <a href="https://www.codespaces.org/" target="_blank" rel="noopener">
             Code Space
           </a>
-          , a nonprofit community that aims to spread knowledge about tech & connecting Gen Z-s into the global tech
-          scene.
+          , one of Africa’s fastest-growing tech communities that connects black builders, designers, and founders
+          globally. Through large-scale hackathons and events since 2021 and is committed to inspiring and equipping the
+          next generation of builders.
+        </p>
+        <p>
+          Clinton cares deeply about giving black builder globally a space to build and belong, believing that community
+          can transform lives and inspire lasting change.
         </p>
       </section>
 
