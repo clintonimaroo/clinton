@@ -1,33 +1,80 @@
 'use client'
 
 import { useEffect } from 'react'
-import Footer from '@/components/Footer'
+
+const shineTimers = new WeakMap<HTMLElement, number>()
+
+function runShine(target: HTMLElement) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return
+  }
+
+  const easing =
+    getComputedStyle(document.documentElement).getPropertyValue('--ease-out-quart').trim() ||
+    'cubic-bezier(0.165, 0.84, 0.44, 1)'
+
+  if (typeof target.animate === 'function') {
+    target.animate(
+      [{ backgroundPosition: '100% 50%' }, { backgroundPosition: '0% 50%' }],
+      { duration: 1000, easing }
+    )
+    return
+  }
+
+  const currentTimer = shineTimers.get(target)
+
+  if (currentTimer) {
+    window.clearTimeout(currentTimer)
+  }
+
+  target.classList.remove('is-shining')
+  void target.offsetWidth
+  target.classList.add('is-shining')
+
+  const nextTimer = window.setTimeout(() => {
+    target.classList.remove('is-shining')
+    shineTimers.delete(target)
+  }, 1000)
+
+  shineTimers.set(target, nextTimer)
+}
 
 export default function Home() {
   useEffect(() => {
     const links = document.querySelectorAll('a')
-    links.forEach((link) => {
-      link.addEventListener(
-        'touchstart',
-        function () {
-          this.classList.add('active-touch')
-        },
-        { passive: true }
-      )
+    const handleTouchStart = (event: Event) => {
+      const target = event.currentTarget as HTMLAnchorElement | null
+      target?.classList.add('active-touch')
+    }
+    const handleTouchEnd = (event: Event) => {
+      const target = event.currentTarget as HTMLAnchorElement | null
+      target?.classList.remove('active-touch')
+    }
+    const shineLinks = document.querySelectorAll<HTMLElement>('.shine-hover')
+    const handleNativeShine = (event: Event) => {
+      const target = event.currentTarget as HTMLElement | null
+      if (target) {
+        runShine(target)
+      }
+    }
 
-      link.addEventListener(
-        'touchend',
-        function () {
-          this.classList.remove('active-touch')
-        },
-        { passive: true }
-      )
+    links.forEach((link) => {
+      link.addEventListener('touchstart', handleTouchStart, { passive: true })
+      link.addEventListener('touchend', handleTouchEnd, { passive: true })
+    })
+    shineLinks.forEach((link) => {
+      link.addEventListener('mouseenter', handleNativeShine)
+      link.addEventListener('pointerenter', handleNativeShine)
     })
 
     return () => {
       links.forEach((link) => {
-        link.removeEventListener('touchstart', () => {})
-        link.removeEventListener('touchend', () => {})
+        link.removeEventListener('touchstart', handleTouchStart)
+        link.removeEventListener('touchend', handleTouchEnd)
+      })
+      shineLinks.forEach((link) => {
+        link.removeEventListener('mouseenter', handleNativeShine)
+        link.removeEventListener('pointerenter', handleNativeShine)
       })
     }
   }, [])
@@ -39,20 +86,25 @@ export default function Home() {
         <p className="subtitle">ml, product, obsess over the problem</p>
       </header>
 
-      <section>
+      <section className="intro-section">
         <p>
           Software engineer, thinker, Speaker and founder. One acquisition — Bimepay (acquired by Techwave).
         </p>
         <p>
           Today, I am building Siri for codebase at{' '}
-          <a href="https://heyfathom.com" target="_blank" rel="noopener" className="underline-link">
+          <a
+            href="https://heyfathom.com"
+            target="_blank"
+            rel="noopener"
+            className="shine-hover"
+          >
             heyfathom.com
           </a>
           , an agentic voice-first code intelligence for engineering teams whose first language isn&apos;t English.
         </p>
         <p>
           Also running{' '}
-          <a href="https://www.codespaces.org/" target="_blank" rel="noopener" className="underline-link">
+          <a href="https://www.codespaces.org/" target="_blank" rel="noopener" className="intro-emphasis-link">
             Code Space
           </a>{' '}
           (non-profit tech community creating opportunities for young Black and African builders globally, growing to 10,000+ members and
@@ -72,8 +124,8 @@ export default function Home() {
             </a>
           </h3>
           <p>
-            Enhanced Siri&apos;s intent classification as an ML Engineer Intern, focusing on complex query handling and
-            model fine-tuning to make interactions more intuitive.
+            Fine-tuned transformer-based ML models for intent classification in Siri&apos;s query processing pipeline.
+            Worked on attention mechanism optimizations contributing to latency reductions on internal benchmarks.
           </p>
         </div>
 
@@ -111,7 +163,7 @@ export default function Home() {
 
         <ul className="research-list">
           <li>
-            Disaster-aware uav navigation - vision-based hazard classification (mobilenetv2, 85.2% accuracy) + ppo-clip agents, a*/ppo evaluation under simulated disaster conditions -{' '}
+            Disaster-aware uav navigation - vision-based hazard classification (mobilenetv2, 85.2% accuracy) + ppo-clip agents, a*/ppo evaluation under simulated disaster conditions under{' '}
             <a href="https://ieeexplore.ieee.org/author/37086069468" target="_blank" rel="noopener">
               Dr. Peter Taiwo
             </a>{' '}

@@ -13,6 +13,7 @@
   --accent: #e0e0e0;
   --link: #0a0a0a;
   --link-hover: #000000;
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 * {
@@ -46,6 +47,51 @@ body {
 .underline-link {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.shine-hover {
+  display: inline;
+  color: transparent;
+  cursor: crosshair;
+  background-image: linear-gradient(
+    in oklch 120deg,
+    var(--text) 0%,
+    var(--text) 33%,
+    #fad150 42%,
+    #cf1d43 58%,
+    var(--text) 67%,
+    var(--text) 100%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  &:focus-visible,
+  &.is-shining {
+    animation: shine-sweep 1000ms var(--ease-out-quart);
+  }
+}
+
+@keyframes shine-sweep {
+  from {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0% 50%;
+  }
+}
+
+.intro-section {
+  p {
+    color: var(--text-secondary);
+  }
+}
+
+.intro-emphasis-link {
+  color: var(--text);
+  font-size: 1.04em;
 }
 
 section > p:first-child {
