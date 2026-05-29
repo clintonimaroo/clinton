@@ -1,6 +1,14 @@
 @font-face {
-  font-family: 'Relative Mono';
-  src: url('https://cdn.prod.website-files.com/676f33518961fefbaba8132f/67705eae8b0bea6cfabc001c_relative-mono10pitch.otf') format('opentype');
+  font-family: 'STK Miso';
+  src: url('/fonts/natural/STKMisoVariableComplete.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Standard Mono';
+  src: url('/fonts/natural/GT-Standard-Mono-Standard-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -22,24 +30,36 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: #3b82f6;
+  background: #dbeafe;
+}
+
+::-moz-selection {
+  color: #3b82f6;
+  background: #dbeafe;
+}
+
 html {
-  font-size: 14px;
+  font-size: 15px;
 
   @media (max-width: 600px) {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   @media (max-width: 380px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 body {
-  font-family: 'Relative Mono', monospace;
+  font-family: 'STK Miso', Arial, sans-serif;
   background-color: var(--background);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -148,14 +168,16 @@ header {
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.72rem;
+  font-weight: 400;
+  line-height: 1.2;
   margin-bottom: 5px;
 }
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
 }
 
 section {
@@ -179,8 +201,9 @@ section {
 }
 
 h2 {
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
   margin-bottom: 20px;
 
   @media (max-width: 480px) {
@@ -196,8 +219,9 @@ h2 {
   }
 
   h3 {
-    font-size: 1.125rem;
-    font-weight: 500;
+    font-size: 1.18rem;
+    font-weight: 400;
+    line-height: 1.25;
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -296,7 +320,7 @@ h2 {
 
   h3 {
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 10px;
   }
 
