@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="intro-section">
         <p>
-          Software engineer, thinker, Speaker and founder. One acquisition — Bimepay (acquired by Techwave).
+          Software engineer, thinker, Speaker and founder. One acquisition - Bimepay (acquired by Techwave).
         </p>
         <p>
           Today, I am building Siri for codebase at{' '}
