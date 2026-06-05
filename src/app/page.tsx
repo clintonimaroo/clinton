@@ -238,7 +238,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/clintonimaro/" aria-label="Clinton's LinkedIn profile" target="_blank" rel="noopener" className="underline-link">
               LinkedIn
             </a>{' '}
-            — or send me an email at{' '}
+            - or send me an email at{' '}
             <a href="mailto:hi@clintonimaro.com" className="underline-link">hi@clintonimaro.com</a>
           </p>
         </div>
