@@ -112,8 +112,8 @@ export default function Home() {
           </a>
         </p>
         <p>
-          I care a lot about design and like to build impossible things. I&apos;m drawn to AI-native products, and to building things that
-          last.
+          I care a lot about design and like to build impossible things. With extreme practicality, I make crazy ideas real. I&apos;m drawn
+          to AI-native products, and to building things that last.
         </p>
         <p>
           Outside work, I like travelling, tennis, and just collecting those moments. My memories are continuously being warped by new perspectives.
