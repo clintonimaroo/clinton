@@ -51,7 +51,7 @@ export default function About() {
         <h2 id="background">background</h2>
         <p>
           My passion for technology started early, driven by curiosity and a desire to solve real-world problems. Over
-          the years, I&apos;ve developed expertise across multiple domains—from machine learning to software engineering.
+          the years, I&apos;ve developed expertise across multiple domains, from machine learning to software engineering.
         </p>
 
         <div className="project">
