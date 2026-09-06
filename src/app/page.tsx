@@ -2,18 +2,8 @@
 
 import { useEffect } from 'react'
 
-import SectionRail, { type RailItem } from '@/components/SectionRail'
 import Timeline from '@/components/Timeline'
 import { EXPERIENCE } from '@/lib/data'
-
-const RAIL_ITEMS: RailItem[] = [
-  { id: 'intro', label: 'intro' },
-  { id: 'experience', label: 'experience' },
-  { id: 'research', label: 'research' },
-  { id: 'publications', label: 'publications' },
-  { id: 'blog', label: 'blog' },
-  { id: 'connect', label: 'connect' },
-]
 
 const shineTimers = new WeakMap<HTMLElement, number>()
 
@@ -94,8 +84,6 @@ export default function Home() {
 
   return (
     <div className="container">
-      <SectionRail items={RAIL_ITEMS} />
-
       <header>
         <h1>Clinton Imaro</h1>
         <p className="subtitle">ml, product, infra</p>
