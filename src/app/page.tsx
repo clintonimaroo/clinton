@@ -3,6 +3,8 @@
 import { useEffect } from 'react'
 
 import SectionRail, { type RailItem } from '@/components/SectionRail'
+import Timeline from '@/components/Timeline'
+import { EXPERIENCE } from '@/lib/data'
 
 const RAIL_ITEMS: RailItem[] = [
   { id: 'intro', label: 'intro' },
@@ -122,33 +124,7 @@ export default function Home() {
 
       <section id="experience">
         <h2>Experience</h2>
-        <div className="project">
-          <h3>
-            <a href="https://www.apple.com/" aria-label="Apple role" target="_blank" rel="noopener">
-              core ml @apple
-            </a>
-          </h3>
-          <p>
-            Fine-tuned transformer-based ML models for intent classification in Siri&apos;s query processing pipeline.
-            Worked on attention mechanism optimizations contributing to latency reductions on internal benchmarks.
-          </p>
-        </div>
-
-
-        <div className="project">
-          <h3>
-            <a href="https://www.codespaces.org/" aria-label="Code Space role" target="_blank" rel="noopener">
-              founder @code space
-            </a>
-          </h3>
-          <p>
-            Code Space is a dynamic community that connects, educates, and offers opportunities to Gen Z developers and
-            tech enthusiasts across Africa. Recognizing the continent&apos;s large population of unemployed youth, we
-            are connecting African Gen Zs for Growth, Impact, and Success. Since our inception in 2021, Code Space has
-            been a pivotal community for over 10k+ young tech talents, driving innovation through hackathons and tech
-            events.
-          </p>
-        </div>
+        <Timeline entries={EXPERIENCE} />
 
         <div style={{ marginTop: '20px' }}>
           <a
