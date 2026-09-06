@@ -2,6 +2,17 @@
 
 import { useEffect } from 'react'
 
+import SectionRail, { type RailItem } from '@/components/SectionRail'
+
+const RAIL_ITEMS: RailItem[] = [
+  { id: 'intro', label: 'intro' },
+  { id: 'experience', label: 'experience' },
+  { id: 'research', label: 'research' },
+  { id: 'publications', label: 'publications' },
+  { id: 'blog', label: 'blog' },
+  { id: 'connect', label: 'connect' },
+]
+
 const shineTimers = new WeakMap<HTMLElement, number>()
 
 function runShine(target: HTMLElement) {
@@ -81,17 +92,16 @@ export default function Home() {
 
   return (
     <div className="container">
+      <SectionRail items={RAIL_ITEMS} />
+
       <header>
         <h1>Clinton Imaro</h1>
-        <p className="subtitle">ml, product, obsess over the problem</p>
+        <p className="subtitle">ml, product, infra</p>
       </header>
 
-      <section className="intro-section">
+      <section id="intro" className="intro-section">
         <p>
-          Software engineer, thinker, Speaker and founder. One acquisition - Bimepay (acquired by Techwave).
-        </p>
-        <p>
-          Today, I am building Siri for codebase at{' '}
+          Today currently building Siri for codebase at{' '}
           <a
             href="https://heyfathom.com"
             target="_blank"
@@ -100,23 +110,18 @@ export default function Home() {
           >
             heyfathom.com
           </a>
-          , an agentic voice-first code intelligence for engineering teams whose first language isn&apos;t English.
         </p>
         <p>
-          Also running{' '}
-          <a href="https://www.codespaces.org/" target="_blank" rel="noopener" className="intro-emphasis-link">
-            Code Space
-          </a>{' '}
-          (non-profit tech community creating opportunities for young Black and African builders globally, growing to 10,000+ members and
-          organizing one of West Africa&apos;s largest annual hackathon with 1,000+ attendees).
+          I care a lot about design and like to build impossible things. I&apos;m drawn to AI-native products, and to building things that
+          last.
         </p>
         <p>
-          Outside work, I like travelling, tennis, and just collecting those moments. My memories are continuously being warped by new perspectives. I care about AI-native products and building things that last.
+          Outside work, I like travelling, tennis, and just collecting those moments. My memories are continuously being warped by new perspectives.
         </p>
       </section>
 
-      <section>
-        <h2 id="experience">Experience</h2>
+      <section id="experience">
+        <h2>Experience</h2>
         <div className="project">
           <h3>
             <a href="https://www.apple.com/" aria-label="Apple role" target="_blank" rel="noopener">
@@ -158,8 +163,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2 id="research">Selected Research</h2>
+      <section id="research">
+        <h2>Selected Research</h2>
 
         <ul className="research-list">
           <li>
@@ -179,8 +184,8 @@ export default function Home() {
         </ul>
       </section>
 
-      <section>
-        <h2 id="publications">Publications</h2>
+      <section id="publications">
+        <h2>Publications</h2>
 
         <div className="project">
           <h3>
@@ -197,8 +202,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2 id="blog">blog</h2>
+      <section id="blog">
+        <h2>blog</h2>
         <p>Sometimes i journal, but sometimes i write too much.. </p>
 
         <div className="blog-post">
@@ -226,8 +231,8 @@ export default function Home() {
         </div>
       </section>
 
-<section>
-        <h2 id="connect">Connect</h2>
+<section id="connect">
+        <h2>Connect</h2>
         <div className="contact">
           <p>
             Connect with me on{' '}

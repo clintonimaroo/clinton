@@ -490,6 +490,85 @@ h2 {
   text-align: center;
 }
 
+.section-rail {
+  position: fixed;
+  top: 50%;
+  left: max(20px, calc(50vw - 500px));
+  transform: translateY(-50%);
+  z-index: 10;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 0;
+    border: 0;
+    text-decoration: none;
+  }
+
+  &__tick {
+    display: block;
+    width: 14px;
+    height: 1px;
+    background-color: var(--accent);
+    transition:
+      width 0.25s var(--ease-out-quart),
+      background-color 0.25s var(--ease-out-quart);
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    line-height: 1;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition:
+      opacity 0.25s var(--ease-out-quart),
+      transform 0.25s var(--ease-out-quart);
+  }
+
+  a.is-active .section-rail__tick {
+    width: 26px;
+    background-color: var(--text);
+  }
+
+  a:hover .section-rail__tick,
+  a:focus-visible .section-rail__tick {
+    width: 26px;
+    background-color: var(--text);
+  }
+
+  a:hover .section-rail__label,
+  a:focus-visible .section-rail__label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover .section-rail__label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-rail__tick,
+    .section-rail__label {
+      transition: none;
+    }
+  }
+}
+
 /* Ensure proper orientation changes */
 @media screen and (orientation: portrait) {
   html {
