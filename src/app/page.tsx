@@ -145,6 +145,13 @@ export default function Home() {
             </a>
             . focused on ml-based anomaly detection and vulnerability analysis in connected vehicle networks.
           </li>
+          <li>
+            Decision modeling research (CDMN) at the computer science department of{' '}
+            <a href="https://www.hogent.be/" target="_blank" rel="noopener">
+              HOGENT
+            </a>
+            . focused on ml classification pipelines and making model rationale auditable for faculty reviewers.
+          </li>
         </ul>
       </section>
 
@@ -166,36 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog">
-        <h2>blog</h2>
-        <p>Sometimes i journal, but sometimes i write too much.. </p>
-
-        <div className="blog-post">
-          <a
-            href="https://www.codespaces.org/blog/678afc9ff2541c9b44ce706e"
-            aria-label="Read blog post: A New Year, A new beginning for everyone"
-            target="_blank"
-            rel="noopener"
-          >
-            A New Year, A new beginning for everyone
-          </a>
-          <span className="views">223 views · Jan 18, 2025</span>
-        </div>
-
-        <div className="blog-post">
-          <a
-            href="https://blog.clintonimaro.com/the-year-i-turned-20"
-            aria-label="Read blog post: The year i turned 20"
-            target="_blank"
-            rel="noopener"
-          >
-            The year i turned 20
-          </a>
-          <span className="views">411 views · Jun 25, 2024</span>
-        </div>
-      </section>
-
-<section id="connect">
+      <section id="connect">
         <h2>Connect</h2>
         <div className="contact">
           <p>

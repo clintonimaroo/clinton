@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import Footer from '@/components/Footer'
 
 export default function About() {
   useEffect(() => {
@@ -208,8 +207,6 @@ export default function About() {
           </p>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

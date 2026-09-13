@@ -19,6 +19,7 @@ lerna-debug.log*
 
 # Claude
 .claude
+*[Cc][Ll][Aa][Uu][Dd][Ee]*
 
 # Tests
 /coverage
