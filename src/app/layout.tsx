@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Footer from '@/components/Footer'
 import '../styles/globals.scss'
 
 export const viewport: Viewport = {
@@ -7,6 +8,9 @@ export const viewport: Viewport = {
   maximumScale: 5,
   themeColor: '#ffffff',
 }
+
+// Light by default; runs before first paint so a saved dark choice never flashes light.
+const themeScript = `(function(){var t='light';try{if(localStorage.getItem('theme')==='dark'){t='dark'}}catch(e){}document.documentElement.dataset.theme=t})()`
 
 const description =
   'Software engineer, ML engineer, and founder. Building Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 10,000+ members. ML Engineer at Apple. 100+ tech talks worldwide.'
@@ -64,8 +68,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://clintonimaro.com" />
@@ -224,7 +229,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
