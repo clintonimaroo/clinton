@@ -73,6 +73,59 @@ body {
   text-underline-offset: 3px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The copy button grows out of nothing on hover, so it takes no space at rest. */
+.email-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.email-copy {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    flex-shrink: 0;
+    transition:
+      width 0.5s var(--ease-out-quart),
+      height 0.5s var(--ease-out-quart),
+      margin-left 0.5s var(--ease-out-quart);
+  }
+
+  .email-link:hover & svg,
+  &:focus-visible svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    svg {
+      transition: none;
+    }
+  }
+}
+
 .blurred-redaction {
   display: inline-block;
   color: var(--text);

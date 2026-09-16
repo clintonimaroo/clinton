@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import SectionRail, { type RailItem } from '@/components/SectionRail'
 import Timeline from '@/components/Timeline'
@@ -58,7 +58,27 @@ function runShine(target: HTMLElement) {
   shineTimers.set(target, nextTimer)
 }
 
+const EMAIL = 'hi@clintonimaro.com'
+
 export default function Home() {
+  const [copied, setCopied] = useState(false)
+  const copiedTimer = useRef<number | undefined>(undefined)
+
+  useEffect(() => () => window.clearTimeout(copiedTimer.current), [])
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+    } catch {
+      // Clipboard can be blocked (insecure context, denied permission).
+      return
+    }
+
+    setCopied(true)
+    window.clearTimeout(copiedTimer.current)
+    copiedTimer.current = window.setTimeout(() => setCopied(false), 1600)
+  }
+
   useEffect(() => {
     const links = document.querySelectorAll('a')
     const handleTouchStart = (event: Event) => {
@@ -225,7 +245,43 @@ export default function Home() {
               X (twitter)
             </a>{' '}
             - or send me an email at{' '}
-            <a href="mailto:hi@clintonimaro.com" className="underline-link">hi@clintonimaro.com</a>
+            <span className="email-link">
+              <a href={`mailto:${EMAIL}`} className="underline-link">
+                {EMAIL}
+              </a>
+              <button
+                type="button"
+                className="email-copy"
+                onClick={copyEmail}
+                aria-label={copied ? 'Email address copied' : `Copy ${EMAIL}`}
+                title={copied ? 'Copied' : 'Copy'}
+              >
+                {copied ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M4.75 12.5L9.5 17.25L19.25 6.75"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M7.75 7.75V6.75C7.75 5.09315 9.09315 3.75 10.75 3.75H17.25C18.9069 3.75 20.25 5.09315 20.25 6.75V13.26C20.25 14.9169 18.9069 16.26 17.25 16.26H16.25M3.75 10.75V17.25C3.75 18.9069 5.09315 20.25 6.75 20.25H13.25C14.9069 20.25 16.25 18.9069 16.25 17.25V10.75C16.25 9.09315 14.9069 7.75 13.25 7.75H6.75C5.09315 7.75 3.75 9.09315 3.75 10.75Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
+              </button>
+              <span className="visually-hidden" role="status" aria-live="polite">
+                {copied ? 'Email address copied' : ''}
+              </span>
+            </span>
           </p>
         </div>
       </section>
