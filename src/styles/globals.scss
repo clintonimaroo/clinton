@@ -114,6 +114,7 @@ body {
 .intro-section {
   p {
     color: var(--text-secondary);
+    font-size: 1.05rem;
   }
 }
 
@@ -123,11 +124,7 @@ body {
 }
 
 section > p:first-child {
-  font-size: 15px;
-
-  @media (max-width: 600px) {
-    font-size: 14px;
-  }
+  font-size: 1.05rem;
 }
 
 a {
@@ -184,7 +181,7 @@ h1 {
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.35;
 }
 
@@ -264,6 +261,7 @@ h2 {
 
   p {
     color: var(--text-secondary);
+    font-size: 1.05rem;
     margin-bottom: 10px;
   }
 }
@@ -276,6 +274,7 @@ h2 {
 
   li {
     color: var(--text-secondary);
+    font-size: 1.05rem;
     line-height: 1.6;
     padding-left: 4px;
 
@@ -685,7 +684,7 @@ h2 {
 .tl-desc {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.55;
   color: var(--text-secondary);
 }
