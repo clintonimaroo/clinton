@@ -220,13 +220,9 @@ export default function Home() {
         <h2>Connect</h2>
         <div className="contact">
           <p>
-            Connect with me on{' '}
+            I post sometimes on{' '}
             <a href="https://x.com/clintonimaroo" aria-label="Clinton's X profile" target="_blank" rel="noopener" className="underline-link">
               X (twitter)
-            </a>
-            ,{' '}
-            <a href="https://www.linkedin.com/in/clintonimaro/" aria-label="Clinton's LinkedIn profile" target="_blank" rel="noopener" className="underline-link">
-              LinkedIn
             </a>{' '}
             - or send me an email at{' '}
             <a href="mailto:hi@clintonimaro.com" className="underline-link">hi@clintonimaro.com</a>
