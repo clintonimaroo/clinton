@@ -8,6 +8,9 @@
   --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
   --blue: #3b82f6;
   --blue-tint: #dbeafe;
+  /* Same ground as the page, lifted by a lighter hairline border. */
+  --marquee-bg: var(--background);
+  --marquee-border: #f7f7f7;
   color-scheme: light;
 }
 
@@ -20,6 +23,7 @@
   --link-hover: #ffffff;
   --blue: #60a5fa;
   --blue-tint: #1e3a8a;
+  --marquee-border: #1f1f1f;
   color-scheme: dark;
 }
 
@@ -463,6 +467,68 @@ h2 {
   color: var(--text-secondary);
 }
 
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 190px;
+  border-radius: 999px;
+  background: var(--marquee-bg);
+  padding: 9px 0;
+
+  &:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 14s linear infinite;
+}
+
+.marquee-list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 0 13px;
+  list-style: none;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-fade-l,
+.marquee-fade-r {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 34px;
+  pointer-events: none;
+}
+
+.marquee-fade-l {
+  left: 0;
+  background: linear-gradient(to right, var(--marquee-bg), transparent);
+}
+
+.marquee-fade-r {
+  right: 0;
+  background: linear-gradient(to left, var(--marquee-bg), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -480,11 +546,11 @@ h2 {
       color: var(--text);
     }
 
+    /* Each icon carries its own fill/stroke, so don't force one here. */
     svg {
       display: block;
       width: 17px;
       height: 17px;
-      fill: currentcolor;
     }
   }
 }
