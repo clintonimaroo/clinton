@@ -6,7 +6,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#ffffff',
+  themeColor: '#ededed',
 }
 
 // Light by default; runs before first paint so a saved dark choice never flashes light.
@@ -71,6 +71,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap"
+        />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://clintonimaro.com" />
