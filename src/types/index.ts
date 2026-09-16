@@ -25,3 +25,23 @@ export type ExperienceEntry = {
   logos?: TimelineLogo[]
   cases?: TimelineCase[]
 }
+
+export type WorkArt = {
+  src: string
+  /** Position and size inside the tile, in px at the tile's base scale. */
+  left: number
+  top: number
+  width: number
+  height: number
+}
+
+export type WorkTile = {
+  id: string
+  /** Two-digit index shown before the name, e.g. "01". */
+  num: string
+  name: string
+  label: string
+  description: string
+  href?: string
+  art?: WorkArt[]
+}

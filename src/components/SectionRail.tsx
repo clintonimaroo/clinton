@@ -5,6 +5,10 @@ import { useEffect, useRef, useState } from 'react'
 export type RailItem = {
   id: string
   label: string
+  /** Optional 24x24 path drawn after the label. */
+  iconPath?: string
+  /** Shown in the rail but not linked, for sections that aren't published yet. */
+  locked?: boolean
 }
 
 type SectionRailProps = {
@@ -108,17 +112,35 @@ export default function SectionRail({ items }: SectionRailProps) {
   return (
     <div className="rail-track" ref={trackRef} style={box ? { top: box.top, height: box.height } : undefined}>
       <nav className="rail" aria-label="Sections">
-        {items.map((item) => (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            className={item.id === activeId ? 'txt on' : 'txt'}
-            aria-current={item.id === activeId ? 'true' : undefined}
-            onClick={(event) => handleClick(event, item.id)}
-          >
-            {item.label}
-          </a>
-        ))}
+        {items.map((item) => {
+          const icon = item.iconPath && (
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path clipRule="evenodd" fillRule="evenodd" d={item.iconPath} />
+            </svg>
+          )
+
+          if (item.locked) {
+            return (
+              <span key={item.id} className="txt is-locked" aria-disabled="true">
+                {item.label}
+                {icon}
+              </span>
+            )
+          }
+
+          return (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={item.id === activeId ? 'txt on' : 'txt'}
+              aria-current={item.id === activeId ? 'true' : undefined}
+              onClick={(event) => handleClick(event, item.id)}
+            >
+              {item.label}
+              {icon}
+            </a>
+          )
+        })}
       </nav>
     </div>
   )
