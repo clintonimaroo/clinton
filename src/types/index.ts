@@ -94,6 +94,15 @@ export type WorkCard = {
   hover?: WorkImage
   /** A clip that runs in place of the artwork while the pointer is on the card. */
   hoverClip?: WorkVideo
+  /** A link bar across the top of the card, for work that has a paper to read. */
+  study?: {
+    label: string
+    href: string
+    /** Mark shown at the left of the bar, as a path under /public. */
+    logo?: string
+    /** Its width in design px; the height follows the image. */
+    logoWidth?: number
+  }
   video?: WorkVideo
   /** Where a plain caption sits. Ignored when the card carries a block. */
   caption?: 'top' | 'bottom'
@@ -104,7 +113,11 @@ export type WorkCard = {
     role?: string
     /** Turns the first run of this text in the description into a link. */
     descLink?: { text: string; href: string }
+    /** The placing sentence within the description; a trophy sits before it. */
+    award?: string
     link: string
     href: string
+    /** A second, locked action shown beside the link, for work not yet written up. */
+    locked?: string
   }
 }
