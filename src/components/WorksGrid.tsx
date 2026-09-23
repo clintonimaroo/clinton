@@ -442,11 +442,24 @@ export default function WorksGrid() {
                   <TileDesc block={card.block} />
                   {card.block.role && <p className="tile-role">{card.block.role}</p>}
                   <div className="tile-actions">
-                    {card.block.locked && (
-                      <span className="tile-locked">
-                        {LOCK}
-                        {card.block.locked}
-                      </span>
+                    {card.block.second ? (
+                      <a
+                        className="tile-link tile-alt"
+                        href={card.block.second.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${card.block.second.label}: ${card.name}`}
+                      >
+                        {card.block.second.label}
+                        {ARROW}
+                      </a>
+                    ) : (
+                      card.block.locked && (
+                        <span className="tile-locked">
+                          {LOCK}
+                          {card.block.locked}
+                        </span>
+                      )
                     )}
                     <a
                       className="tile-link"

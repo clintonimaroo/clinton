@@ -122,8 +122,12 @@ export const WORKS: WorkCard[] = [
       description:
         'Community data turned into outreach for The Concilio: a 3D Dallas map, AI answers and personas. First place at the JPMorgan Chase Data for Good Hackathon.',
       award: 'First place at the JPMorgan Chase Data for Good Hackathon.',
-      link: 'View Announcement',
-      href: 'https://www.linkedin.com/posts/murad-alhassen_1stplace-hackathonwin-jpmorgan-ugcPost-7314733775601422336-lL3r/',
+      descLink: {
+        text: 'JPMorgan Chase Data for Good Hackathon',
+        href: 'https://www.linkedin.com/posts/murad-alhassen_1stplace-hackathonwin-jpmorgan-ugcPost-7314733775601422336-lL3r/',
+      },
+      link: 'View on GitHub',
+      href: 'https://github.com/dfgtexas25/Team-8',
     },
   },
   {
