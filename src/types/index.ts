@@ -106,8 +106,8 @@ export type WorkCard = {
     descLink?: { text: string; href: string }
     /** The placing sentence within the description; a trophy sits before it. */
     award?: string
-    link: string
-    href: string
+    link?: string
+    href?: string
     /** A second action shown beside the link, for work with two places to go. */
     second?: { label: string; href: string }
     /** A second, locked action shown beside the link, for work not yet written up. */

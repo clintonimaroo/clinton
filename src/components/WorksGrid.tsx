@@ -461,16 +461,18 @@ export default function WorksGrid() {
                         </span>
                       )
                     )}
-                    <a
-                      className="tile-link"
-                      href={card.block.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${card.block.link}: ${card.name}`}
-                    >
-                      {card.block.link}
-                      {ARROW}
-                    </a>
+                    {card.block.link && card.block.href && (
+                      <a
+                        className="tile-link"
+                        href={card.block.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${card.block.link}: ${card.name}`}
+                      >
+                        {card.block.link}
+                        {ARROW}
+                      </a>
+                    )}
                   </div>
                 </div>
               ) : (

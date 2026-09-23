@@ -4,8 +4,6 @@
 // width it gets, so nothing here is in screen pixels. Every card is the same
 // height unless it sets its own.
 //
-// Cards without a `name` are empty slots: the caption prints the number and the
-// label, and the card is ready for a name plus `art` when the work is in.
 
 import type { WorkCard } from '@/types'
 
@@ -97,15 +95,7 @@ export const WORKS: WorkCard[] = [
       locked: 'Read Case Study',
     },
   },
-  { id: 'slot-13', column: 0, row: 4, num: '13', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
-  { id: 'slot-16', column: 0, row: 5, num: '16', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-19', column: 0, row: 6, num: '19', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-22', column: 0, row: 7, num: '22', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-25', column: 0, row: 8, num: '25', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-28', column: 0, row: 9, num: '28', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-31', column: 0, row: 10, num: '31', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-34', column: 0, row: 11, num: '34', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-
+                
   // Column two
   {
     id: 'concilio',
@@ -141,6 +131,7 @@ export const WORKS: WorkCard[] = [
     border: false,
     dark: true,
     art: [{ src: '/images/work/kard-site.webp', left: 0, top: 0, width: 450, height: 260 }],
+    hover: { src: '/images/work/kard-app.webp', left: 0, top: 0, width: 450, height: 260 },
     block: {
       description:
         'Global payments infrastructure for Gen Z: a dedicated USD or NGN account number, plus physical and virtual cards that work with Apple Pay in Nigeria.',
@@ -183,15 +174,7 @@ export const WORKS: WorkCard[] = [
       locked: 'Read Paper',
     },
   },
-  { id: 'slot-14', column: 1, row: 4, num: '14', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
-  { id: 'slot-17', column: 1, row: 5, num: '17', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
-  { id: 'slot-20', column: 1, row: 6, num: '20', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-23', column: 1, row: 7, num: '23', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-26', column: 1, row: 8, num: '26', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-29', column: 1, row: 9, num: '29', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-32', column: 1, row: 10, num: '32', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-35', column: 1, row: 11, num: '35', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-
+                
   // Column three
   {
     id: 'quietglass',
@@ -261,13 +244,19 @@ export const WORKS: WorkCard[] = [
       href: 'https://www.codespaces.org/',
     },
   },
-  { id: 'slot-12', column: 2, row: 3, num: '12', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
-  { id: 'slot-15', column: 2, row: 4, num: '15', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
-  { id: 'slot-18', column: 2, row: 5, num: '18', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-21', column: 2, row: 6, num: '21', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-24', column: 2, row: 7, num: '24', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-27', column: 2, row: 8, num: '27', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-30', column: 2, row: 9, num: '30', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-33', column: 2, row: 10, num: '33', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-  { id: 'slot-36', column: 2, row: 11, num: '36', label: 'Hackathon', background: '#f3f3f3', caption: 'top' },
-]
+  {
+    id: 'mathgpt',
+    column: 2,
+    row: 3,
+    num: '12',
+    name: 'MathGPT',
+    label: 'Mobile App',
+    background: '#e8e8e8',
+    art: [{ src: '/images/work/mathgpt-app.webp', left: 0, top: 0, width: 450, height: 290 }],
+    block: {
+      description:
+        'AI math solver and homework helper. Step-by-step solutions, AI video explanations and a photo solver covering algebra through calculus.',
+      locked: 'Pr\u00edvat\u00e8',
+    },
+  },
+                ]
