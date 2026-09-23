@@ -975,8 +975,27 @@ h2 {
     align-items: center;
     gap: calc(12px * var(--k, 1));
 
-    .tile-link {
+    .tile-link:last-child {
       margin-left: auto;
+    }
+  }
+
+  /* The second link reads quieter than the one it sits beside. */
+  .tile-alt {
+    color: rgba(10, 10, 10, 0.55);
+
+    &:hover {
+      color: rgb(10, 10, 10);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  .tile.on-dark .tile-alt {
+    color: rgba(237, 237, 237, 0.55);
+
+    &:hover {
+      color: rgb(237, 237, 237);
     }
   }
 

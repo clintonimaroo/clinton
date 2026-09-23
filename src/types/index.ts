@@ -108,6 +108,8 @@ export type WorkCard = {
     award?: string
     link: string
     href: string
+    /** A second action shown beside the link, for work with two places to go. */
+    second?: { label: string; href: string }
     /** A second, locked action shown beside the link, for work not yet written up. */
     locked?: string
   }
