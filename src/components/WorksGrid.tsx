@@ -139,10 +139,23 @@ function HoverClip({ clip }: { clip: WorkVideo }) {
       void el.play().catch(() => {})
     }
 
-    const stop = () => el.pause()
+    // Only stop when the pointer has really gone: a stray leave event, or one
+    // fired as the pointer crosses something inside the card, would otherwise
+    // freeze the clip mid-play.
+    const stop = () => {
+      if (!tile.matches(':hover')) {
+        el.pause()
+      }
+    }
 
     tile.addEventListener('mouseenter', play)
     tile.addEventListener('mouseleave', stop)
+
+    // The pointer can already be on the card when this mounts, and no enter
+    // event is coming in that case, which would leave the clip on its poster.
+    if (tile.matches(':hover')) {
+      play()
+    }
 
     return () => {
       tile.removeEventListener('mouseenter', play)
@@ -166,22 +179,68 @@ function HoverClip({ clip }: { clip: WorkVideo }) {
   )
 }
 
+const LOCK = (
+  <svg className="tile-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M8 1.333a3.333 3.333 0 0 0-3.333 3.334v1.417c-1.15.296-2 1.34-2 2.583V12a2.667 2.667 0 0 0 2.666 2.667h5.334A2.667 2.667 0 0 0 13.333 12V8.667c0-1.243-.85-2.287-2-2.583V4.667A3.333 3.333 0 0 0 8 1.333ZM10 6V4.667a2 2 0 1 0-4 0V6h4ZM8 8.667c.368 0 .667.298.667.666v2a.667.667 0 1 1-1.334 0v-2c0-.368.299-.666.667-.666Z"
+      clipRule="evenodd"
+    />
+  </svg>
+)
+
+/**
+ * Hugeicons "Trophy" from the MIT-licensed free set, inlined rather than
+ * pulled in as a dependency for a single glyph.
+ */
+const TROPHY = (
+  <svg className="tile-trophy" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 15V19" />
+      <path d="M7 5H5.58088C5.03886 5 4.76785 5 4.55944 5.10228C4.36064 5.19984 4.19984 5.36064 4.10228 5.55944C4 5.76785 4 6.03886 4 6.58088C4 7.6579 4 8.19641 4.16249 8.66982C4.31812 9.12325 4.58015 9.53278 4.92663 9.8641C5.28837 10.21 5.77732 10.4357 6.7552 10.887L7 11" />
+      <path d="M17 5H18.4191C18.9611 5 19.2322 5 19.4406 5.10228C19.6394 5.19984 19.8002 5.36064 19.8977 5.55944C20 5.76785 20 6.03886 20 6.58088C20 7.6579 20 8.19641 19.8375 8.66982C19.6819 9.12325 19.4198 9.53278 19.0734 9.8641C18.7116 10.21 18.2227 10.4357 17.2448 10.887L17 11" />
+      <path d="M7 4.88889C7 4.06119 7 3.64735 7.12061 3.31596C7.32281 2.76043 7.76043 2.32281 8.31596 2.12061C8.64735 2 9.06119 2 9.88889 2H14.1111C14.9388 2 15.3527 2 15.684 2.12061C16.2396 2.32281 16.6772 2.76043 16.8794 3.31596C17 3.64735 17 4.06119 17 4.88889V10C17 12.7614 14.7614 15 12 15C9.23858 15 7 12.7614 7 10V4.88889Z" />
+      <path d="M8 22C8 21.0681 8 20.6022 8.15224 20.2346C8.35523 19.7446 8.74458 19.3552 9.23463 19.1522C9.60218 19 10.0681 19 11 19H13C13.9319 19 14.3978 19 14.7654 19.1522C15.2554 19.3552 15.6448 19.7446 15.8478 20.2346C16 20.6022 16 21.0681 16 22H8Z" />
+    </g>
+  </svg>
+)
+
 /** A description, with the one phrase that carries a link split out of it. */
 function TileDesc({ block }: { block: NonNullable<WorkCard['block']> }) {
-  const { description, descLink } = block
-  const at = descLink ? description.indexOf(descLink.text) : -1
+  const { description, descLink, award } = block
 
-  if (!descLink || at < 0) {
-    return <p className="tile-desc">{description}</p>
+  // The link may sit inside the placing sentence, so the text is split on the
+  // award first and each side then gets the link treatment.
+  const linked = (text: string) => {
+    const at = descLink ? text.indexOf(descLink.text) : -1
+
+    if (!descLink || at < 0) {
+      return text
+    }
+
+    return (
+      <>
+        {text.slice(0, at)}
+        <a href={descLink.href} target="_blank" rel="noopener noreferrer">
+          {descLink.text}
+        </a>
+        {text.slice(at + descLink.text.length)}
+      </>
+    )
+  }
+
+  const badge = award ? description.indexOf(award) : -1
+
+  if (badge < 0) {
+    return <p className="tile-desc">{linked(description)}</p>
   }
 
   return (
     <p className="tile-desc">
-      {description.slice(0, at)}
-      <a href={descLink.href} target="_blank" rel="noopener noreferrer">
-        {descLink.text}
-      </a>
-      {description.slice(at + descLink.text.length)}
+      {linked(description.slice(0, badge))}
+      {TROPHY}
+      {linked(description.slice(badge))}
     </p>
   )
 }
@@ -303,7 +362,7 @@ export default function WorksGrid() {
   return (
     <section className="works" id="works">
       <div className="works-head">
-        <span>My Works</span>
+        <span>Selected Work</span>
 
         <div className="works-filters">
           {FILTERS.map((filter) => (
@@ -337,7 +396,12 @@ export default function WorksGrid() {
               ref={(node) => {
                 tilesRef.current[index] = node
               }}
-              className={['tile', card.dark && 'on-dark', card.cap70 && 'cap-70']
+              className={[
+                'tile',
+                (card.hover || card.hoverClip) && 'has-swap',
+                card.dark && 'on-dark',
+                card.cap70 && 'cap-70',
+              ]
                 .filter(Boolean)
                 .join(' ')}
               style={{
@@ -372,21 +436,53 @@ export default function WorksGrid() {
 
               {card.hoverClip && <HoverClip clip={card.hoverClip} />}
 
+              {card.study && (
+                <a
+                  className="tile-study"
+                  href={card.study.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${card.study.label}: ${card.name}`}
+                >
+                  {card.study.logo && (
+                    <img
+                      src={card.study.logo}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      style={{ width: `calc(${card.study.logoWidth ?? 90}px * var(--k, 1))` }}
+                    />
+                  )}
+                  <span>
+                    {card.study.label}
+                    {ARROW}
+                  </span>
+                </a>
+              )}
+
               {card.block ? (
                 <div className="tile-block">
                   <div className="tile-cap">{caption}</div>
                   <TileDesc block={card.block} />
                   {card.block.role && <p className="tile-role">{card.block.role}</p>}
-                  <a
-                    className="tile-link"
-                    href={card.block.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View the ${card.name} live site`}
-                  >
-                    {card.block.link}
-                    {ARROW}
-                  </a>
+                  <div className="tile-actions">
+                    {card.block.locked && (
+                      <span className="tile-locked">
+                        {LOCK}
+                        {card.block.locked}
+                      </span>
+                    )}
+                    <a
+                      className="tile-link"
+                      href={card.block.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${card.block.link}: ${card.name}`}
+                    >
+                      {card.block.link}
+                      {ARROW}
+                    </a>
+                  </div>
                 </div>
               ) : (
                 <div className={`tile-cap fixed ${card.caption ?? 'bottom'}`}>{caption}</div>

@@ -750,6 +750,16 @@ h2 {
   }
 }
 
+.tile-trophy {
+  display: inline-block;
+  vertical-align: -0.14em;
+  flex-shrink: 0;
+  transform-origin: bottom center;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.35s ease;
+}
+
 .tile-role {
   margin: 0;
   font-size: calc(13 * var(--k));
@@ -939,9 +949,92 @@ h2 {
     font-size: calc(13px * var(--k, 1));
   }
 
+  .tile-trophy {
+    width: calc(13px * var(--k, 1));
+    height: calc(13px * var(--k, 1));
+    margin-right: calc(4px * var(--k, 1));
+  }
+
+  .tile:hover .tile-trophy {
+    color: rgb(10, 10, 10);
+    transform: translateY(calc(-2px * var(--k, 1))) scale(1.14);
+  }
+
+  .tile.on-dark:hover .tile-trophy {
+    color: rgb(237, 237, 237);
+  }
+
   .tile-link {
     gap: calc(6px * var(--k, 1));
     font-size: calc(15px * var(--k, 1));
+  }
+
+  /* The link keeps the right edge whether or not a locked item sits beside it. */
+  .tile-actions {
+    display: flex;
+    align-items: center;
+    gap: calc(12px * var(--k, 1));
+
+    .tile-link {
+      margin-left: auto;
+    }
+  }
+
+  .tile-locked {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(6px * var(--k, 1));
+    font-size: calc(15px * var(--k, 1));
+    line-height: 1.6;
+    letter-spacing: -0.075px;
+    color: rgba(10, 10, 10, 0.4);
+    cursor: default;
+    white-space: nowrap;
+  }
+
+  .tile-lock {
+    width: calc(14px * var(--k, 1));
+    height: calc(14px * var(--k, 1));
+    flex-shrink: 0;
+  }
+
+  .tile.on-dark .tile-locked {
+    color: rgba(237, 237, 237, 0.4);
+  }
+
+  /* Cards with a paper behind them carry a link bar over the artwork. The
+     card's own overflow rounds the bar's top corners for us. */
+  .tile-study {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(44px * var(--k, 1));
+    padding: 0 calc(20px * var(--k, 1));
+    background: #fff;
+    border-bottom: 0.6px solid rgba(10, 10, 10, 0.08);
+    font-size: calc(14px * var(--k, 1));
+    color: rgb(10, 10, 10);
+
+    img {
+      display: block;
+      height: auto;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: calc(6px * var(--k, 1));
+      white-space: nowrap;
+    }
+
+    &:hover span {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
   }
 
   /* A card carrying a hover still cross-fades to it, artwork and all. */
@@ -954,7 +1047,8 @@ h2 {
     object-position: center;
   }
 
-  .tile:hover {
+  /* Only a card with a second image swaps; the rest keep their artwork. */
+  .tile.has-swap:hover {
     .tile-art:not(.tile-hover) {
       opacity: 0;
     }
@@ -984,8 +1078,13 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   .works-grid.settled .tile,
-  .works-grid .tile-art {
+  .works-grid .tile-art,
+  .works-grid .tile-trophy {
     transition: none;
+  }
+
+  .works-grid .tile:hover .tile-trophy {
+    transform: none;
   }
 }
 
