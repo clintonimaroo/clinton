@@ -168,20 +168,15 @@ export const WORKS: WorkCard[] = [
     row: 3,
     num: '11',
     name: 'Disaster-Aware UAV',
-    label: 'Research',
+    label: 'Project',
     background: '#fafafa',
     art: [{ src: '/images/work/uav-drone.webp', left: 0, top: 0, width: 450, height: 285 }],
-    study: {
-      label: 'Read Research',
-      href: 'https://github.com/clintonimaroo/uav-research',
-      logo: '/images/work/ceamls-logo.webp',
-      logoWidth: 96,
-    },
     block: {
       description:
         'Pairs a CNN hazard classifier with a PPO agent so a UAV can route around fire and flooding. Reached 99% and 100% goal success on sparse and moderate maps.',
       link: 'View on GitHub',
       href: 'https://github.com/clintonimaroo/uav-research',
+      locked: 'Read Paper',
     },
   },
   { id: 'slot-14', column: 1, row: 4, num: '14', label: 'Mobile App', background: '#f5f5f5', caption: 'bottom' },
