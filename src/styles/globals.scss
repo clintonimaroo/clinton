@@ -738,6 +738,24 @@ h2 {
   line-height: 1.4;
   letter-spacing: -0.075px;
   color: rgba(10, 10, 10, 0.6);
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: rgb(10, 10, 10);
+    }
+  }
+}
+
+.tile-role {
+  margin: 0;
+  font-size: calc(13 * var(--k));
+  line-height: 1.4;
+  letter-spacing: -0.075px;
+  color: rgba(10, 10, 10, 0.45);
 }
 
 .tile-link {
@@ -772,10 +790,202 @@ h2 {
 
   .tile-desc {
     color: rgba(237, 237, 237, 0.6);
+
+    a:hover {
+      color: rgb(237, 237, 237);
+    }
+  }
+
+  .tile-role {
+    color: rgba(237, 237, 237, 0.45);
   }
 
   .tile-link {
     color: rgb(237, 237, 237);
+  }
+}
+
+/* Work page: the three-column card grid.
+   Every size inside a card is authored on a 450px-wide card and multiplied by
+   --k, which WorksGrid sets from the width the grid actually gets. These rules
+   are scoped under .works-grid so the homepage .tiles block, which derives its
+   own --k from a container query, keeps working untouched. */
+.works {
+  width: calc(100% - 120px);
+  max-width: 1390px;
+  margin: 160px auto 0;
+  scroll-margin-top: 50px;
+
+  @media (max-width: 1100px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 640px) {
+    width: calc(100% - 50px);
+    margin-top: 80px;
+  }
+}
+
+.works-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.6;
+
+  > span {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.works-filters {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  button {
+    font: inherit;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+
+    &[aria-pressed='true'] {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }
+}
+
+.works-grid {
+  position: relative;
+  margin-top: 25px;
+
+  /* Added a frame after the first layout, so cards appear in place and only
+     animate when a filter moves them. */
+  &.settled .tile {
+    transition:
+      top 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .tile {
+    /* The grid hands --k down; every card takes it rather than deriving
+       its own the way the homepage tiles do. */
+    --k: inherit;
+    position: absolute;
+    border-radius: calc(32px * var(--k, 1));
+    /* Where a card sits until the grid places it, so none of them hang off
+       the side of the page on the first paint. */
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .tile-block {
+    left: calc(25px * var(--k, 1));
+    right: calc(25px * var(--k, 1));
+    bottom: calc(25px * var(--k, 1));
+    gap: calc(23px * var(--k, 1));
+  }
+
+  /* The credit belongs to the line above it, so it sits closer. */
+  .tile-desc + .tile-role {
+    margin-top: calc(-13px * var(--k, 1));
+  }
+
+  .tile-cap.fixed {
+    position: absolute;
+    left: calc(25px * var(--k, 1));
+    right: calc(25px * var(--k, 1));
+
+    &.top {
+      top: calc(25px * var(--k, 1));
+    }
+
+    &.bottom {
+      bottom: calc(25px * var(--k, 1));
+    }
+  }
+
+  .tile-id {
+    gap: calc(15px * var(--k, 1));
+    font-size: calc(15px * var(--k, 1));
+  }
+
+  .tile-label {
+    font-size: calc(14px * var(--k, 1));
+  }
+
+  .tile-desc {
+    font-size: calc(15px * var(--k, 1));
+  }
+
+  .tile-role {
+    font-size: calc(13px * var(--k, 1));
+  }
+
+  .tile-link {
+    gap: calc(6px * var(--k, 1));
+    font-size: calc(15px * var(--k, 1));
+  }
+
+  /* A card carrying a hover still cross-fades to it, artwork and all. */
+  .tile-art {
+    transition: opacity 0.35s ease;
+  }
+
+  .tile-hover {
+    opacity: 0;
+    object-position: center;
+  }
+
+  .tile:hover {
+    .tile-art:not(.tile-hover) {
+      opacity: 0;
+    }
+
+    .tile-hover {
+      opacity: 1;
+    }
+  }
+
+  /* Softer caption ink where the artwork underneath is busy. */
+  .tile.on-dark.cap-70 {
+    .tile-num,
+    .tile-name,
+    .tile-label {
+      color: rgba(237, 237, 237, 0.7);
+    }
+  }
+}
+
+.tile-vid {
+  display: block;
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .works-grid.settled .tile,
+  .works-grid .tile-art {
+    transition: none;
   }
 }
 
