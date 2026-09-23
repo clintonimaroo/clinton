@@ -436,30 +436,6 @@ export default function WorksGrid() {
 
               {card.hoverClip && <HoverClip clip={card.hoverClip} />}
 
-              {card.study && (
-                <a
-                  className="tile-study"
-                  href={card.study.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${card.study.label}: ${card.name}`}
-                >
-                  {card.study.logo && (
-                    <img
-                      src={card.study.logo}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      style={{ width: `calc(${card.study.logoWidth ?? 90}px * var(--k, 1))` }}
-                    />
-                  )}
-                  <span>
-                    {card.study.label}
-                    {ARROW}
-                  </span>
-                </a>
-              )}
-
               {card.block ? (
                 <div className="tile-block">
                   <div className="tile-cap">{caption}</div>

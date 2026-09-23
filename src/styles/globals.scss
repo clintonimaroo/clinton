@@ -1002,41 +1002,6 @@ h2 {
     color: rgba(237, 237, 237, 0.4);
   }
 
-  /* Cards with a paper behind them carry a link bar over the artwork. The
-     card's own overflow rounds the bar's top corners for us. */
-  .tile-study {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(44px * var(--k, 1));
-    padding: 0 calc(20px * var(--k, 1));
-    background: #fff;
-    border-bottom: 0.6px solid rgba(10, 10, 10, 0.08);
-    font-size: calc(14px * var(--k, 1));
-    color: rgb(10, 10, 10);
-
-    img {
-      display: block;
-      height: auto;
-    }
-
-    span {
-      display: inline-flex;
-      align-items: center;
-      gap: calc(6px * var(--k, 1));
-      white-space: nowrap;
-    }
-
-    &:hover span {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-  }
-
   /* A card carrying a hover still cross-fades to it, artwork and all. */
   .tile-art {
     transition: opacity 0.35s ease;
