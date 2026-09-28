@@ -96,6 +96,25 @@ export const WORKS: WorkCard[] = [
     },
   },
                 
+  {
+    id: 'brandale',
+    column: 0,
+    row: 4,
+    num: '13',
+    name: 'BrandALE',
+    label: 'Website',
+    background: '#000000',
+    border: false,
+    dark: true,
+    art: [{ src: '/images/work/brandale-site.webp', left: 0, top: 0, width: 450, height: 290 }],
+    block: {
+      description:
+        'Finds breakout branded content, ranks the creators behind it, then repurposes winning posts and publishes them across connected social channels.',
+      link: 'View Live Site',
+      href: 'https://brandale.ai/',
+    },
+  },
+
   // Column two
   {
     id: 'concilio',
