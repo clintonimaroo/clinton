@@ -133,7 +133,7 @@ export default function Home() {
         </p>
         <p>
           explore{' '}
-          <Link href="/work" className="shine-hover">
+          <Link href="/work" className="shine-hover work-link">
             things i&apos;ve built
           </Link>
           .

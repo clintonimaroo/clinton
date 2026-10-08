@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Relative Mono';
+  src: url('https://cdn.prod.website-files.com/676f33518961fefbaba8132f/67705eae8b0bea6cfabc001c_relative-mono10pitch.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ededed;
   --text: #0a0a0a;
@@ -56,7 +64,7 @@ html {
 }
 
 body {
-  font-family: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: 'Relative Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   font-optical-sizing: auto;
   background-color: var(--background);
   color: var(--text);
@@ -200,6 +208,15 @@ body {
   &.is-shining {
     animation: shine-sweep 1000ms var(--ease-out-quart);
   }
+}
+
+/* The shine effect paints the text transparent, so the rule needs its own
+   colour or it inherits that transparency and disappears. */
+.work-link {
+  text-decoration: underline;
+  text-decoration-color: var(--text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 @keyframes shine-sweep {
@@ -705,7 +722,7 @@ h2 {
 }
 
 .tile-label {
-  font-family: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: 'Relative Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: calc(14 * var(--k));
   line-height: 1.6;
   letter-spacing: -0.07px;
