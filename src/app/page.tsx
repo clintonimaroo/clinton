@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 import Timeline from '@/components/Timeline'
@@ -129,6 +130,13 @@ export default function Home() {
         </p>
         <p>
           Outside work, I like travelling, tennis, and just collecting those moments. My memories are continuously being warped by new perspectives.
+        </p>
+        <p>
+          explore{' '}
+          <Link href="/work" className="shine-hover">
+            things i&apos;ve built
+          </Link>
+          .
         </p>
       </section>
 
