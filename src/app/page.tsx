@@ -337,7 +337,7 @@ export default function Home() {
       )}
 
       <section>
-        <h2>Talks &amp; interviews</h2>
+        <h2>Some things written about me</h2>
         <ul className="talks">
           {TALKS.map((t) => (
             <li key={t.href}>
