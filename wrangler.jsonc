@@ -1,0 +1,9 @@
+// Created by Clinton Imaro on 26th November 2026.
+{
+  "name": "clinton",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
