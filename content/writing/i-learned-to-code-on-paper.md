@@ -1,120 +1,68 @@
 <!-- Created by Clinton Imaro on 27th November 2026. -->
 ---
-title: i learned to code on paper
+title: I learned to code on paper
 date: 2026-11-27
 tag: building
-summary: no laptop, no power, no one i knew in tech. then a new language, two lost years and 50 credits that didn't transfer. how three countries taught me three different ways to build.
+summary: I started programming without a laptop, lost two years to a new language and watched 50 university credits disappear. Here is what building a career across Nigeria, Belgium and the United States has taught me.
 draft: true
 ---
 
-for most of my first year as a programmer, i didn't own a computer.
+For most of my first year as a programmer, I did not own a laptop.
 
-i wrote java in a notebook. classes, loops, the buttons for a calculator i couldn't run. then on the days i could, i walked to a friend's house near our church, because his family had steady power and mine didn't, and i typed it all in to find out if any of it worked.
+I was a teenager in Abuja, and I had just finished a Java bootcamp. Since I had nothing to run my code on, I wrote it by hand in a notebook. Whenever I could, I walked to a friend's house near our church, because his family ran a generator and ours did not, and I typed everything in to see whether any of it worked. Most of the time it did not. I would fix what I could on his laptop, go home, and start writing the next thing on paper.
 
-most of it didn't. i kept writing anyway.
+That was 2017. Since then I have built a career across three countries: Nigeria, Belgium and the United States. I have worked at Apple and Microsoft, started a community that now has more than 5,000 members, and co-founded a startup that did not make it.
 
-that's the version of me i think about a lot now. i've built across three countries since then, nigeria, belgium and the united states, and each one taught me something the others couldn't. but it started with a notebook.
+People often ask me which country was the best one to build in. I think that is the wrong question, because each of them taught me something I could not have learned in the other two. This is my attempt to write those lessons down, in case they are useful to someone who is where I was.
 
-## nigeria: build with nothing
+## Nigeria taught me to start before I was ready
 
-i grew up in uselu, in benin city. there's a saying about kids who grow up there: that sending them to school is money wasted.
+I did not grow up around technology. As a child in Benin City, the things I was good at were practical ones. I kept a small poultry farm while I was still in primary school, and I sold my drawings to older students, which is how I paid for lunch. When I later moved to Abuja to live with my uncle, I spent my free time making sandals out of leftover material from the local shoemaker.
 
-i didn't know programming existed. i knew how to make things. in primary school i ran a small poultry farm, a real one. i drew and painted, and my seniors sold my drawings, which was my lunch money. when we moved to abuja i was always making something out of carton, scrap and offcuts i picked up from the shoemaker's shop. sandals, mostly. needle and thread.
+It was my uncle who introduced me to programming. One day he asked me whether I knew that behind every button on my phone, someone had written code to make it work. I did not. I had never even heard the word "coding". He signed me up for a bootcamp during the long holiday, and I finished the six-month programme in under two months. The first real thing I built was a calculator for Windows, followed by a game of X and O.
 
-then my uncle, who i was living with, asked me a question i couldn't answer. "you know every button you press on your phone? someone wrote code to make it do that."
+What I remember most about that period is how little I had. I had no laptop, the power went out all the time, and I knew exactly one other person who was learning to code. If I had waited for the right conditions, I would never have started. So I worked with what was in front of me, and for a while that was a notebook and a pen. My mum supported the decision from the start, and I am still grateful for that.
 
-i didn't know that. i didn't know coding was a word.
+The same instinct led to my first product. Whenever there was a big football match or a new season of Big Brother Naija, my friends and I had the same problem. Either there was no electricity to watch it, or the cable subscription had run out. I wanted a way to watch on a phone without burning through data, so my friend Precious and I built one and called it Afrowatch. I had only ever written desktop software in Java, which meant I had to learn HTML, CSS and JavaScript while building it. I learned more from that one project than from any course I have taken since.
 
-he registered me for a bootcamp over the long holiday in 2017. it was meant to take six months. i finished in under two. my first language was java, my first ide was netbeans, which is still the worst tool i've ever used, and the first real thing i built was a desktop calculator. then a game of x and o.
+Code Space began in a similar way. It was a WhatsApp group where three teenagers shared resources and talked about the things we wanted to build one day. Then a magazine asked to interview me. The person who ran the interview was Isabella, and at one point she asked about the group. I told her I wanted it to be a place for young people who felt they were not doing enough and had nobody to learn with, because that was exactly how I had felt. Some time later she got back in touch and asked to join the team. She is now my co-founder. We opened a Telegram group, more than 500 people joined, and we registered Code Space as a nonprofit. Today it has over 5,000 members across Africa.
 
-i didn't know a single person in tech. the only other kid i knew who was coding was a boy from my school, who asked me to teach him. i told him i'd only just started myself, so he went and signed up for his own bootcamp. that was the whole tech scene, as far as i could see.
+None of those things started with a plan. They started with a problem I was living with and whatever tools I had at the time. That is the first lesson I would pass on: you do not need permission or perfect conditions to begin. You need a problem you care about and the willingness to look a little foolish while you work on it.
 
-my mum raised me on her own. she never once told me to stop.
+## Belgium taught me that going backwards can be progress
 
-### the problem i lived with
+I moved to Belgium to finish secondary school, and I arrived expecting to carry on from where I had stopped. Instead, the school told me that I could not join a regular class until I spoke Dutch. I spent more than a year in a language school before I was allowed to continue my education.
 
-a few years later, everyone around me had the same two problems on match day. either there was no power to watch the game, or the gotv or dstv subscription had run out, or the plan you had didn't include the channel. same thing every season of big brother naija, which runs live all day and everyone wanted to catch.
+After that I made things harder for myself by choosing the wrong course. I enrolled in electrical engineering, because I thought it was close to the hands-on work I had always enjoyed. It was not, and I was learning it in a language I had only just picked up. A year later I switched to programming. Between the language school and that detour, I ended up two years behind where I had expected to be.
 
-so i built afro now, which later became afrowatch. a streaming app for people paying for every megabyte. i built it with my friend precious, and it dragged both of us out of what we knew. i'd only ever built desktop apps in java, and suddenly i was learning html, css and javascript by shipping a product.
+For a long time I thought of those years as lost. I see them differently now, because of what happened next.
 
-around the same time, my first paid gig came in: a website for an italian auto company. i remember thinking, people will actually pay me for this.
+The organisation that ran my language school was called GO! Talent, and I did an internship in its IT department. It was not glamorous work. We were the people everyone called when something stopped working, whether that was a single computer or the lights in an entire building. But I did the job well, and when the internship ended my manager recommended me for a role as a software engineer. For the first time, I was building systems that schools depended on every day. When something broke, it affected every school that relied on us. Nigeria had taught me how to get something working. Belgium taught me how to keep it working.
 
-### the group chat that grew up
+That experience led to an internship at Microsoft in Brussels, where I learned how carefully large companies ship software. Later I joined Apple as a machine learning intern on a team based in San Francisco, while I was still living in Belgium. I remember the moment it sank in that the boy who used to write Java in a notebook was now working on Siri.
 
-code space started as a whatsapp group. me, precious, and another precious, who's still with code space today. teenagers swapping links and dreaming out loud about being the next zuckerberg.
+So the second lesson is about patience. When you move to a new country, you will almost certainly have to take a few steps back. You may need to learn a language, repeat a year or accept a job that is below your ability. It feels like failure while it is happening. In my case, the job I was overqualified for is the one that opened every door that came after it.
 
-then a magazine wanted to interview me. the person who called to do it was isabella. halfway through, she asked about code space, and i heard myself say something i hadn't planned: that there were so many people out there who felt like they weren't doing enough, and i wanted to build a place for them.
+## The United States taught me that timing matters as much as the idea
 
-a few weeks later, she came back and said she wanted in.
+I eventually left Belgium because studying computer science in Dutch was becoming a struggle, and I had learned that my diploma would be difficult to use in other countries. I transferred to a university in the United States with close to 70 credits. The university accepted 20 of them, which set me back once again.
 
-we moved to telegram, because that's where everyone in nigeria was, and more than 500 people joined in the first stretch. that was the moment it felt real. we bought a domain, built a site, and registered code space as a nonprofit. today it's over 5,000 young builders, and we've run hackathons, workshops and laptop giveaways with partners like aws, paystack and wix.
+In my first year there, two friends and I entered the OpenAI startup hackathon in New York. We nearly did not go, and we only booked our tickets at the last minute. When we walked in, there were more than 200 teams in the room. Many of them were established startups with paying customers, and the judges were investors. I turned to one of my teammates and told him this was going to be difficult.
 
-nigeria taught me to build with nothing. it didn't teach me to build properly.
+We had one advantage, which was the idea. I wanted to build a tool that let engineers ask questions about a codebase out loud and hear the answers spoken back. Voice AI had not taken off yet, and I was convinced it was about to. We built a working version during the event, made it into the final six, and gave a live demo on the main stage. We finished second.
 
-## belgium: build properly
+That project became Fathom. Within a few months we had 258 engineers using it in a closed beta and more than 60,000 queries a month. We also had something even more valuable, which was a head start in a market that almost nobody else had entered.
 
-i left abuja before finishing secondary school and moved to belgium to finish there. on day one, the school told me i couldn't start.
+We did not use it. My co-founders and I were at different universities, and they were in their final semester. We worked on Fathom remotely, in between classes and exams, when we should have been in one room giving it everything we had. By the time we were all free to do that, voice AI was everywhere and our head start was gone.
 
-i didn't speak dutch. so before i was allowed into a normal classroom, i spent more than a year in language school learning to speak, write and read it, plus an integration course. i went from being ahead to being behind, overnight.
+I have thought about that a great deal. The idea was good and the early numbers were strong, but neither of those things was enough. The third lesson is the one that cost me the most to learn: a good idea has a window, and you have to move while it is open.
 
-then i made a mistake. i chose electrical engineering, because i thought it was the closest thing to the making and fixing i'd always loved. i spent a year in classes where, half the time, i couldn't follow what was being said. so i switched to programming.
+## What I would tell my sixteen-year-old self
 
-between the language school and the wrong turn, i lost two years. i still feel them.
+If I could go back to that boy in Abuja with his notebook, I would not tell him that it gets easier, because it does not. I would tell him three things.
 
-### the job nobody wanted
+The first is to start now, with whatever he has. The second is not to panic when life sets him back, because the setbacks are often where the real learning happens. The third is that when something starts to work, he should give it everything before the moment passes.
 
-the organisation that ran my language school was go! talent. i interned in their it department, the people you call when anything breaks, right down to a whole building's lights going off. i learned to assemble a pc from parts.
+I am still learning the third one. Today I am building Lane, an AI agent that runs the back office for car dealerships, and I am researching how drones can find their own way through disaster zones. I do not know yet which of these will work. What I do know is that I will not wait for the perfect conditions, and I will not waste a head start again.
 
-when i finished, my boss recommended me to his boss, and i came back as a software engineer. the systems i worked on were used by schools and organisations every single day, and when something broke, it broke for all of them at once. you learn very quickly that "it works on my machine" means nothing.
-
-then microsoft, in brussels. the scale was two or three times anything i'd touched. at go! talent, a change could be live within a week. at microsoft, a change went through a long process and sometimes never shipped at all. that taught me patience, and why process exists.
-
-and then the one i still can't quite believe. i joined apple as an ml engineering intern, working on intent classification for siri, with a team based in san francisco. i was in belgium the whole time. i remember thinking, damn. i'm working at apple. from belgium. after learning to code in a notebook.
-
-### why i left
-
-meanwhile, university in belgium was getting harder. i'd learned enough dutch to live and talk, but not enough to learn databases in it. the first semester was fine. the second wasn't. and i found out the diploma i was working towards would be hard to use anywhere outside belgium.
-
-so i made a move. i looked at canada and the uk, and chose the united states.
-
-belgium taught me to build properly. it also taught me that staying comfortable can cost you more than leaving.
-
-## the united states: build big
-
-i transferred to morgan state as an international student with close to 70 credits. they accepted 20.
-
-that set me back again. by now, on a normal timeline, i should have graduated. i've decided not to let that be the story.
-
-### the room in new york
-
-the openai startup hackathon was in new york. we almost didn't go. we booked our tickets last minute.
-
-more than 1,000 people had applied. over 200 teams were in the room, and most of them weren't students. they were real new york startups with products and revenue, and the judges were vcs. i turned to one of my guys and said, this is going to be difficult.
-
-but i'd had the idea the second i read the problem statement. voice-first code intelligence, for engineers working outside their first language. voice ai wasn't a thing yet. i was sure it would be.
-
-we built it. we pitched. after the first round i was confident we'd make the top six, and we did. we were the second-to-last team on the main stage, and we demoed the product live. when we walked back to our seats, people kept stopping us to say we'd won it.
-
-we came second. a few people were genuinely annoyed on our behalf. i was just proud of what three of us built in those hours.
-
-### what i got wrong
-
-that was fathom. we came out of new york with real traction, 258 engineers in a closed beta and 60,000 queries a month, and a few months where nobody else was doing what we were doing.
-
-then we built it apart. i was at morgan state, my co-founders were at howard. they were in their final semester and i was in the middle of mine, and as international students there was only so much we could do. we didn't sprint. by the time we could, voice ai was everywhere and the window had closed.
-
-if i could go back, i'd lock in and run one hard sprint before the end of the year. i think about that a lot. but i don't let one thing define me. you keep building until the one that's meant to click, clicks.
-
-now i'm building lane, putting an agent in the middle of how independent car dealers run their business. and at morgan state i'm researching autonomous drones for disaster response. that work turned into two papers at itc 2026.
-
-the united states taught me to build big. to stop asking whether something is too large to try.
-
-## what i'd tell the kid with the notebook
-
-if i could say one thing to sixteen-year-old me in abuja, it wouldn't be "it gets easier." it doesn't.
-
-it would be this. no dream is easy, so take on responsibility early. surround yourself with the right people. it doesn't have to be perfect, and it doesn't all have to work. if the thing you need doesn't exist, build it. bet on yourself, and take bigger risks than feels comfortable. success isn't only what you achieve, it's who you are while you're doing it.
-
-and you weren't made to stay in one place. three countries so far, and i'm only in my twenties.
-
-i don't write code in notebooks anymore. but i still build like i might have to.
+I no longer write code in a notebook. But I still try to build as if I might have to.
