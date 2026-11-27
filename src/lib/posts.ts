@@ -1,7 +1,6 @@
 // Created by Clinton Imaro on 27th November 2026.
 import fs from 'node:fs'
 import path from 'node:path'
-import { marked } from 'marked'
 
 export type Post = {
   slug: string
@@ -15,6 +14,78 @@ export type Post = {
 }
 
 const DIR = path.join(process.cwd(), 'content', 'writing')
+
+function escape(text: string): string {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
+function inline(text: string): string {
+  return escape(text)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1" />')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
+}
+
+function render(markdown: string): string {
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n')
+  const out: string[] = []
+  let i = 0
+  while (i < lines.length) {
+    const line = lines[i]
+    if (!line.trim()) {
+      i++
+      continue
+    }
+    if (line.startsWith('```')) {
+      const code: string[] = []
+      i++
+      while (i < lines.length && !lines[i].startsWith('```')) code.push(lines[i++])
+      i++
+      out.push(`<pre><code>${escape(code.join('\n'))}</code></pre>`)
+      continue
+    }
+    const heading = line.match(/^(#{1,3})\s+(.*)$/)
+    if (heading) {
+      const level = heading[1].length + 1
+      out.push(`<h${level}>${inline(heading[2])}</h${level}>`)
+      i++
+      continue
+    }
+    if (/^(-{3,}|\*{3,})$/.test(line.trim())) {
+      out.push('<hr />')
+      i++
+      continue
+    }
+    if (line.startsWith('>')) {
+      const quote: string[] = []
+      while (i < lines.length && lines[i].startsWith('>')) quote.push(lines[i++].replace(/^>\s?/, ''))
+      out.push(`<blockquote><p>${inline(quote.join(' '))}</p></blockquote>`)
+      continue
+    }
+    if (/^[-*]\s+/.test(line) || /^\d+\.\s+/.test(line)) {
+      const ordered = /^\d+\./.test(line)
+      const items: string[] = []
+      while (i < lines.length && (/^[-*]\s+/.test(lines[i]) || /^\d+\.\s+/.test(lines[i]))) {
+        items.push(`<li>${inline(lines[i].replace(/^([-*]|\d+\.)\s+/, ''))}</li>`)
+        i++
+      }
+      out.push(ordered ? `<ol>${items.join('')}</ol>` : `<ul>${items.join('')}</ul>`)
+      continue
+    }
+    const para: string[] = []
+    while (
+      i < lines.length &&
+      lines[i].trim() &&
+      !/^(#{1,3}\s|>|```|[-*]\s|\d+\.\s)/.test(lines[i])
+    ) {
+      para.push(lines[i++])
+    }
+    out.push(`<p>${inline(para.join(' '))}</p>`)
+  }
+  return out.join('\n')
+}
 
 function parse(file: string): Post {
   const raw = fs.readFileSync(path.join(DIR, file), 'utf8').replace(/^<!--.*?-->\s*/s, '')
@@ -36,7 +107,7 @@ function parse(file: string): Post {
     summary: meta.summary ?? '',
     draft: meta.draft === 'true',
     minutes: Math.max(1, Math.round(words / 230)),
-    html: marked.parse(body, { async: false }) as string,
+    html: render(body),
   }
 }
 
