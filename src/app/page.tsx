@@ -98,7 +98,7 @@ const WORK: Role[] = [
     years: 'earlier',
     title: 'Founder',
     org: 'Afrowatch',
-    body: 'live tv streaming for africa, built for viewers paying for every megabyte. free to watch, funded by creators, and designed to stream more on less data.',
+    body: 'a streaming app built for viewers paying for every megabyte. it squeezed more watch time out of each bundle of data, kept watching free and made its money from creators.',
   },
 ]
 
