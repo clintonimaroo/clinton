@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>Things I&apos;ve built</h2>
+        <h2>Some things I&apos;ve built</h2>
         <ShowMore className="items" visible={3}>
           {PROJECTS.map((item) => (
             <ItemRow item={item} key={item.name} />
