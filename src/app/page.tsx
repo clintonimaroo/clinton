@@ -66,13 +66,13 @@ const WORK: Role[] = [
     href: 'https://www.morgan.edu/',
     body: (
       <>
-        disaster-aware uav navigation with{' '}
+        autonomous uav navigation for disaster response. built the vision-based hazard classifier (
+        <span className="em">mobilenetv2, 85.2% accuracy, 18.5ms</span>) and the ppo agents that plan around it, with
+        two papers accepted at <span className="em">ITC 2026</span> under{' '}
         <Ext href="https://ieeexplore.ieee.org/author/37086069468" className="em">
           Dr. Peter Taiwo
         </Ext>
-        . vision-based hazard classification (<span className="em">mobilenetv2, 85.2% accuracy, 18.5ms</span>) feeding
-        ppo-clip agents, tested against a* under simulated disasters. two papers accepted to{' '}
-        <span className="em">ITC 2026</span>.
+        .
       </>
     ),
   },
@@ -81,14 +81,11 @@ const WORK: Role[] = [
     title: 'Co-founder',
     org: 'Fathom',
     href: 'https://www.heyfathom.com/',
-    tag: 'voice ai',
     body: (
       <>
-        voice-first code intelligence for engineering teams whose first language isn&apos;t english. parallel agents for
-        codebase understanding, multilingual voice queries and visual maps. closed beta with{' '}
-        <span className="em">158 engineers</span> across the us, uk and asia, running{' '}
-        <span className="em">60,000+ queries a month</span>. <span className="em">2nd place</span> at the openai startup
-        hackathon.
+        voice-first code intelligence for engineers working outside their first language. closed beta with{' '}
+        <span className="em">158 engineers</span> across the us, uk and asia, <span className="em">60,000+</span>{' '}
+        queries a month, and <span className="em">2nd place</span> at the openai startup hackathon.
       </>
     ),
   },
@@ -97,27 +94,27 @@ const WORK: Role[] = [
     title: 'ML Engineer Intern',
     org: 'Apple',
     href: 'https://www.apple.com/',
-    body: "fine-tuned transformers for intent classification in siri's query pipeline, with attention optimisations that cut latency on internal benchmarks.",
+    body: 'intent classification for siri. fine-tuned transformer models in the query pipeline and cut latency on internal benchmarks.',
   },
   {
     years: '2023',
     title: 'Cloud Engineer Intern',
     org: 'Microsoft',
     href: 'https://www.microsoft.com/',
-    body: 'azure deployment automation for enterprise apps. ci/cd reliability and resource allocation across environments.',
+    body: 'deployment automation on azure for enterprise apps, making ci/cd pipelines more reliable.',
   },
   {
     years: '2021 to 2023',
     title: 'Software Engineer',
     org: 'Go! Talent',
     tag: 'belgium',
-    body: 'replaced spreadsheets with real-time dashboards for staff absence and device inventory across school campuses, and kept them running.',
+    body: 'real-time dashboards for staff absence and device inventory across school campuses, replacing spreadsheets.',
   },
   {
     years: 'earlier',
     title: 'Founder',
     org: 'Afrowatch',
-    body: 'where i started. the project technext and rubies first wrote about when i was 18.',
+    body: 'where it started. the project technext and rubies covered when i was 18.',
   },
 ]
 
