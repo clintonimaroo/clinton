@@ -49,7 +49,7 @@ const WORK: Role[] = [
   {
     years: '2025 to now',
     title: 'Robotics Researcher',
-    org: 'Morgan State',
+    org: 'Morgan State, CEAMLS',
     href: 'https://www.morgan.edu/',
     body: (
       <>
