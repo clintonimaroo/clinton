@@ -74,23 +74,30 @@ export default function Footer() {
   return (
     <footer className="home site-end">
       <div className="links">
-        {LINKS.filter((link) => link.href).map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label={`Clinton Imaro on ${link.name} (opens in a new tab)`}
-            title={link.name}
-          >
-            {link.icon}
-          </a>
-        ))}
+        {LINKS.map((link) =>
+          link.href ? (
+            <a
+              key={link.name}
+              href={link.href}
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label={`Clinton Imaro on ${link.name} (opens in a new tab)`}
+              title={link.name}
+            >
+              {link.icon}
+            </a>
+          ) : (
+            <span key={link.name} className="link-soon" title={`${link.name} (coming soon)`}>
+              {link.icon}
+            </span>
+          )
+        )}
       </div>
 
       <p className="email">
         <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
       </p>
+      <p className="updated">last updated: 11/2026</p>
     </footer>
   )
 }

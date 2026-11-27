@@ -416,3 +416,15 @@ body {
     }
   }
 }
+
+.home .updated {
+  margin-top: 8px;
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+}
+
+.home .links .link-soon {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}

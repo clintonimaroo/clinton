@@ -70,8 +70,10 @@ const WORK: Role[] = [
     body: (
       <>
         voice-first code intelligence for engineering teams whose first language isn&apos;t english. parallel agents for
-        codebase understanding, multilingual voice queries and visual maps. <span className="em">2nd place</span> at the
-        openai startup hackathon.
+        codebase understanding, multilingual voice queries and visual maps. closed beta with{' '}
+        <span className="em">158 engineers</span> across the us, uk and asia, running{' '}
+        <span className="em">60,000+ queries a month</span>. <span className="em">2nd place</span> at the openai startup
+        hackathon.
       </>
     ),
   },
@@ -116,7 +118,7 @@ const PROJECTS: Item[] = [
     name: 'Becky',
     href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078',
     tag: 'ios · live',
-    body: 'matchmaking for marriage-ready singles. it matches on values and readiness instead of swipes, and only opens chat once both sides agree. i was the founding engineer and built the app and the matching algorithm before handing it to the in-house team.',
+    body: 'matchmaking for marriage-ready singles. it matches on values and readiness instead of swipes, and only opens chat once both sides agree. i was the founding engineer and built the ios and android apps and the matching algorithm, then handed it to the in-house team at 2,163 users.',
     links: [{ label: 'app store', href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078' }],
   },
   {
@@ -148,21 +150,21 @@ const PROJECTS: Item[] = [
 ]
 
 const TALKS: { name: string; href: string; tag: string }[] = [
-  { name: 'Tech Teens: an 18-year-old software engineer', href: 'https://www.youtube.com/watch?v=XhVWlybFujw', tag: 'technext · video' },
+  { name: 'Tech Teens: an 18-year-old software engineer', href: 'https://www.youtube.com/watch?v=XhVWlybFujw', tag: 'technext, 2022' },
   {
     name: 'Meet the 18-year-old techie building the future',
     href: 'https://technext24.com/tech-teens/clinton-imaro-18-year-old-afrowatch-founder/',
-    tag: 'technext',
+    tag: 'technext, 2022',
   },
   {
     name: 'Building a community to rewrite the African narrative',
     href: 'https://rubiestech.org/we-are-building-a-community-to-rewrite-african-narrative-through-tech-clinton-imaro-ceo-afrowatch/',
-    tag: 'rubies',
+    tag: 'rubies, 2023',
   },
   {
     name: 'The 19-year-old inspiring the next generation',
     href: 'https://thecondia.com/19-year-old-microsoft-cloud-engineer-clinton-imaro/',
-    tag: 'condia',
+    tag: 'condia, 2023',
   },
 ]
 
@@ -226,10 +228,12 @@ export default function Home() {
           i build ai products and the communities that grow the people who&apos;ll build the next ones.
         </p>
         <p>
-          based in san francisco. i founded <span className="em">Code Space</span> in 2021, did ml at{' '}
-          <span className="em">Apple</span> and cloud at <span className="em">Microsoft</span>, and co-founded{' '}
-          <span className="em">Fathom</span>. i study computer science at <span className="em">Morgan State</span>, where i
-          research how drones find their way through disasters. first-gen.
+          based in san francisco. i founded <span className="em">Code Space</span> in 2021 and grew it to 5,000+
+          members, with events backed by aws, paystack and wix. i co-founded <span className="em">Fathom</span>, which took
+          2nd at the openai startup hackathon and ran a closed beta with 158 engineers. before that, ml on siri at{' '}
+          <span className="em">Apple</span> and cloud at <span className="em">Microsoft</span>. google named me the
+          youngest developer from africa in 2021. now studying computer science at{' '}
+          <span className="em">Morgan State</span>, researching drone navigation for disaster response. first-gen.
         </p>
       </section>
 
