@@ -73,8 +73,6 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="https://clintonimaro.com" />
-        <meta name="google-site-verification" content="" />
         <meta name="author" content="Clinton Imaro" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta property="og:locale" content="en_US" />
@@ -86,6 +84,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
+              '@id': 'https://clintonimaro.com/#person',
               name: 'Clinton Imaro',
               alternateName: '@clintonimaro',
               url: 'https://clintonimaro.com',
@@ -189,9 +188,10 @@ export default function RootLayout({
               },
               sameAs: [
                 'https://github.com/clintonimaroo',
-                'https://linkedin.com/in/clintonimaro',
+                'https://www.linkedin.com/in/clintonimaro',
                 'https://x.com/clintonimaro',
                 'https://www.instagram.com/clintonimaro/',
+                'https://www.facebook.com/clintonimaroo',
                 'https://blog.clintonimaro.com',
                 'https://www.codespaces.org',
               ],
@@ -204,11 +204,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'ProfilePage',
-              mainEntity: {
-                '@type': 'Person',
-                name: 'Clinton Imaro',
-                url: 'https://clintonimaro.com',
-              },
+              mainEntity: { '@id': 'https://clintonimaro.com/#person' },
               url: 'https://clintonimaro.com',
             }),
           }}
@@ -221,10 +217,7 @@ export default function RootLayout({
               '@type': 'WebSite',
               name: 'Clinton Imaro',
               url: 'https://clintonimaro.com',
-              author: {
-                '@type': 'Person',
-                name: 'Clinton Imaro',
-              },
+              author: { '@id': 'https://clintonimaro.com/#person' },
             }),
           }}
         />
