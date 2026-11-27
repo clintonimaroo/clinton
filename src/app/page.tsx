@@ -32,7 +32,7 @@ const WORK: Role[] = [
         has grown into a community of <span className="em">5,000+</span> members, running workshops, hackathons and
         events with partners including <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
         <span className="em">Wix</span> and <span className="em">Couchbase</span>. i lead strategy, partnerships and
-        programmes, and our hackathons have put over <span className="em">1,200</span> builders in one room to ship real
+        programmes, and our flagship event has put over <span className="em">1,200</span> builders in one room to ship real
         products.
       </>
     ),
