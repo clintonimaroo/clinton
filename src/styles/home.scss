@@ -364,12 +364,11 @@ body {
 }
 
 .home .awards {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  li {
+  .award {
     display: flex;
     gap: 18px;
     color: var(--text-secondary);
@@ -382,5 +381,21 @@ body {
 
   .tag {
     margin-left: 10px;
+  }
+}
+
+.home .show-more {
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--link-hover);
   }
 }

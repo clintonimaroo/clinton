@@ -1,3 +1,5 @@
+import ShowMore from '@/components/ShowMore'
+
 const EMAIL = 'hi@clintonimaro.com'
 
 function Ext({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) {
@@ -21,8 +23,11 @@ const WORK: Role[] = [
     tag: 'nonprofit',
     body: (
       <>
-        i started code space as a whatsapp group in 2021. it&apos;s now a nonprofit of{' '}
-        <span className="em">5,000+</span> young black builders, connected through workshops, hackathons and events.
+        i started code space as a whatsapp group in 2021 and grew it into a nonprofit of{' '}
+        <span className="em">5,000+</span> young builders across africa. we run workshops, hackathons and events, and
+        have partnered with <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
+        <span className="em">Wix</span>, <span className="em">Couchbase</span>, <span className="em">Kora</span> and more
+        to put real opportunities in front of our members.
       </>
     ),
     items: [
@@ -219,7 +224,7 @@ export default function Home() {
 
       <section>
         <h2>Work</h2>
-        <div className="roles">
+        <ShowMore className="roles" visible={3}>
           {WORK.map((role) => (
             <div className="role" key={role.org + role.years}>
               <p className="years">{role.years}</p>
@@ -238,16 +243,16 @@ export default function Home() {
               )}
             </div>
           ))}
-        </div>
+        </ShowMore>
       </section>
 
       <section>
         <h2>Projects</h2>
-        <div className="items">
+        <ShowMore className="items" visible={3}>
           {PROJECTS.map((item) => (
             <ItemRow item={item} key={item.name} />
           ))}
-        </div>
+        </ShowMore>
         <p className="more">
           <a href="/work" className="see-more">
             all work
@@ -274,17 +279,17 @@ export default function Home() {
 
       <section>
         <h2>Awards</h2>
-        <ul className="awards">
+        <ShowMore className="awards" visible={4}>
           {AWARDS.map((a) => (
-            <li key={a.name + a.year}>
+            <div className="award" key={a.name + a.year}>
               <span className="year">{a.year}</span>
               <span>
                 <span className="em">{a.name}</span>
                 <span className="tag">{a.by}</span>
               </span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </ShowMore>
       </section>
 
       <section>
