@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 const themeScript = `(function(){var t='light';try{if(localStorage.getItem('theme')==='dark'){t='dark'}}catch(e){}document.documentElement.dataset.theme=t})()`
 
 const description =
-  'Software engineer, ML engineer, and founder. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple. 100+ tech talks worldwide.'
+  'Clinton Imaro is a Nigerian software engineer, ML engineer, founder and product leader based in San Francisco. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple.'
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro',
@@ -103,9 +103,15 @@ export default function RootLayout({
                   height: 400,
                 },
               ],
-              jobTitle: ['Software Engineer', 'ML Engineer', 'Founder'],
+              jobTitle: ['Software Engineer', 'ML Engineer', 'Founder', 'Product Leader'],
               description:
-                'Software engineer, ML engineer, and founder. Co-founded Fathom, AI code intelligence for engineering teams. Founded Code Space (5,000+ members). Former ML Engineer Intern at Apple. Undergraduate researcher at Morgan State University. 100+ tech talks worldwide. Published at ITC 2026.',
+                'Clinton Imaro is a Nigerian software engineer, ML engineer, founder and product leader based in San Francisco. Co-founded Fathom, AI code intelligence for engineering teams. Founded Code Space (5,000+ members). Former ML Engineer Intern at Apple. Undergraduate researcher at Morgan State University. 100+ tech talks worldwide. Published at ITC 2026.',
+              homeLocation: {
+                '@type': 'Place',
+                name: 'San Francisco',
+                addressRegion: 'California',
+                addressCountry: 'United States',
+              },
               birthDate: '2004-06-26',
               birthPlace: {
                 '@type': 'Place',
