@@ -10,7 +10,7 @@ function Ext({ href, children, className }: { href: string; children: React.Reac
   )
 }
 
-type Item = { name: string; href?: string; tag: string; body: React.ReactNode }
+type Item = { name: string; href?: string; tag: string; body: React.ReactNode; links?: { label: string; href: string }[] }
 
 type Role = { years: string; title: string; org: string; href?: string; tag?: string; body: React.ReactNode; items?: Item[] }
 
@@ -39,8 +39,8 @@ const WORK: Role[] = [
       {
         name: "Spacer's Hack",
         href: 'https://hackathon.codespaces.org/',
-        tag: 'hackathon · 2023',
-        body: 'our online hackathon, sponsored by couchbase.',
+        tag: 'lagos · 2023',
+        body: 'our hackathon conference, sponsored by couchbase. the last edition drew 1,200 builders.',
       },
     ],
   },
@@ -108,32 +108,42 @@ const PROJECTS: Item[] = [
   {
     name: 'Kard',
     href: 'https://kard-pink.vercel.app/',
-    tag: 'fintech · 2023',
-    body: 'payments for gen z: a usd or ngn account number, plus physical and virtual cards that work with apple pay in nigeria. i founded it and led the build.',
+    tag: 'fintech · 2023 to 2024',
+    body: "gen z in nigeria kept getting locked out of global payments, so i built kard: a dedicated usd or ngn account number, plus physical and virtual cards that work with apple pay. i founded it and led the build end to end.",
+    links: [{ label: 'site', href: 'https://kard-pink.vercel.app/' }],
   },
   {
     name: 'Becky',
     href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078',
-    tag: 'ios',
-    body: 'matchmaking for marriage-ready singles. matches on values and readiness rather than swipes, and opens chat only once both sides agree.',
+    tag: 'ios · live',
+    body: 'matchmaking for marriage-ready singles. it matches on values and readiness instead of swipes, and only opens chat once both sides agree. i was the founding engineer and built the app and the matching algorithm before handing it to the in-house team.',
+    links: [{ label: 'app store', href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078' }],
   },
   {
-    name: 'The Concilio',
-    href: 'https://github.com/dfgtexas25/Team-8',
-    tag: '1st place',
-    body: 'community data turned into outreach: a 3d dallas map, ai answers and personas. first place at the jpmorgan chase data for good hackathon.',
+    name: 'QuietGlass',
+    href: 'https://github.com/clintonimaroo/quietglass',
+    tag: 'mac app · open source',
+    body: 'a native macos app that frosts your screen the moment you look away, using your airpods or the camera. everything runs on device, nothing leaves your mac.',
+    links: [{ label: 'github', href: 'https://github.com/clintonimaroo/quietglass' }],
   },
   {
-    name: 'Harvest Commit',
-    href: 'https://github.com/clintonimaroo/harvest-commit',
-    tag: '1st place',
-    body: 'turns farm orders, inventory, crew and weather into a daily harvest plan, then texts it to the farmer. first place at morgan techfest 2026.',
+    name: 'BrandALE',
+    href: 'https://brandale.ai/',
+    tag: 'live',
+    body: 'finds breakout branded content, ranks the creators behind it, then repurposes the winning posts and publishes them across connected social channels.',
+    links: [{ label: 'site', href: 'https://brandale.ai/' }],
+  },
+  {
+    name: 'MathGPT',
+    tag: 'mobile · private',
+    body: 'an ai math solver and homework helper. step-by-step solutions, ai video explanations and a photo solver, covering algebra through calculus.',
   },
   {
     name: 'Sketcha',
     href: 'https://github.com/clintonimaroo/Sketcha',
     tag: 'open source',
-    body: 'cursor for ee design. describe a circuit in plain language and get a clean electrical diagram without touching cad.',
+    body: 'cursor for electrical design. describe a circuit or a space in plain language and get a clean electrical and architectural diagram, without touching cad.',
+    links: [{ label: 'github', href: 'https://github.com/clintonimaroo/Sketcha' }],
   },
 ]
 
@@ -182,6 +192,15 @@ function ItemRow({ item }: { item: Item }) {
         <span className="tag">{item.tag}</span>
       </p>
       <p>{item.body}</p>
+      {item.links && (
+        <p className="item-links">
+          {item.links.map((l) => (
+            <Ext href={l.href} key={l.href}>
+              {l.label}
+            </Ext>
+          ))}
+        </p>
+      )}
     </div>
   )
 }
