@@ -1,4 +1,7 @@
+import Link from 'next/link'
+
 import ShowMore from '@/components/ShowMore'
+import { formatDate, getPosts } from '@/lib/posts'
 
 const EMAIL = 'hi@clintonimaro.com'
 
@@ -197,6 +200,8 @@ function ItemRow({ item }: { item: Item }) {
 }
 
 export default function Home() {
+  const posts = getPosts().slice(0, 3)
+
   return (
     <main className="home">
       <div className="intro">
@@ -307,6 +312,29 @@ export default function Home() {
           ))}
         </ShowMore>
       </section>
+
+      {posts.length > 0 && (
+        <section>
+          <h2>Recent writing</h2>
+          <div className="posts">
+            {posts.map((post) => (
+              <Link href={`/writing/${post.slug}`} className="post-row" key={post.slug}>
+                <span className="post-meta">
+                  {[post.tag, formatDate(post.date), `${post.minutes} min read`].filter(Boolean).join(' · ')}
+                  {post.draft && ' · draft'}
+                </span>
+                <span className="post-title">{post.title}</span>
+                {post.summary && <span className="post-summary">{post.summary}</span>}
+              </Link>
+            ))}
+          </div>
+          <p className="more">
+            <Link href="/writing" className="see-more">
+              all writing
+            </Link>
+          </p>
+        </section>
+      )}
 
       <section>
         <h2>Talks &amp; interviews</h2>

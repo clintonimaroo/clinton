@@ -459,3 +459,158 @@ body {
     opacity: 1;
   }
 }
+
+.home .back {
+  margin-bottom: 40px;
+  color: var(--text-secondary);
+
+  a {
+    color: var(--text-secondary);
+    padding: 0;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.home .posts {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.home a.post-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0;
+  color: var(--text);
+
+  .post-meta {
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+  }
+
+  .post-title {
+    font-size: 1.08rem;
+    color: var(--text);
+    transition: color 0.2s;
+  }
+
+  .post-summary {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  &:hover .post-title {
+    color: var(--blue);
+  }
+}
+
+.home .post {
+  margin-bottom: 70px;
+
+  .post-meta {
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    margin-bottom: 36px;
+    line-height: 1.25;
+  }
+}
+
+.home .post-body {
+  color: var(--text);
+  line-height: 1.75;
+
+  > * + * {
+    margin-top: 18px;
+  }
+
+  h2 {
+    font-size: 1.18rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-top: 28px;
+  }
+
+  p,
+  li {
+    color: var(--text-secondary);
+  }
+
+  strong {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 0;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  blockquote {
+    padding-left: 16px;
+    box-shadow: inset 2px 0 0 var(--accent);
+    color: var(--text);
+
+    p {
+      color: var(--text);
+    }
+  }
+
+  code {
+    font-family: inherit;
+    font-size: 0.93em;
+    background: #f5f5f5;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  pre {
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 16px 18px;
+    overflow-x: auto;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: var(--accent);
+    margin: 36px 0;
+  }
+}
