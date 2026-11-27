@@ -200,7 +200,10 @@ export default function Home() {
   return (
     <main className="home">
       <div className="intro">
-        <img className="avatar" src="/images/avatar.jpg" alt="Clinton Imaro" width={88} height={88} />
+        <span className="avatar-wrap">
+          <img className="avatar" src="/images/avatar.jpg" alt="Clinton Imaro as a child" width={88} height={88} />
+          <img className="avatar avatar-now" src="/images/avatar-now.jpg" alt="Clinton Imaro" width={88} height={88} />
+        </span>
         <div className="intro-text">
           <div className="name-row">
             <h1>Clinton Imaro</h1>
