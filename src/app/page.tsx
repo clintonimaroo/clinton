@@ -211,7 +211,7 @@ export default function Home() {
   return (
     <main className="home">
       <div className="intro">
-        <img className="avatar" src="/images/headshot.jpg" alt="Clinton Imaro" width={88} height={88} />
+        <img className="avatar" src="/images/avatar.jpg" alt="Clinton Imaro" width={88} height={88} />
         <div className="intro-text">
           <div className="name-row">
             <h1>Clinton Imaro</h1>
