@@ -107,28 +107,24 @@ const PROJECTS: Item[] = [
     href: 'https://kard-pink.vercel.app/',
     tag: '2023 to 2024',
     body: 'global payments for gen z in nigeria. a dedicated usd or ngn account number, plus physical and virtual cards that work with apple pay. founder and lead developer.',
-    links: [{ label: 'site', href: 'https://kard-pink.vercel.app/' }],
   },
   {
     name: 'Becky',
     href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078',
     tag: 'ios and android',
     body: 'matchmaking for marriage-ready singles, matching on values and readiness instead of swipes. built the apps and the matching algorithm as founding engineer, then handed over at 2,163 users.',
-    links: [{ label: 'app store', href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078' }],
   },
   {
     name: 'QuietGlass',
     href: 'https://github.com/clintonimaroo/quietglass',
     tag: 'macos',
     body: 'privacy for your screen. frosts it the moment you look away, using your airpods or the camera, with everything running on device. open source.',
-    links: [{ label: 'github', href: 'https://github.com/clintonimaroo/quietglass' }],
   },
   {
     name: 'BrandALE',
     href: 'https://brandale.ai/',
     tag: 'live',
     body: 'content engine for brands. finds breakout branded posts, ranks the creators behind them, then repurposes the winners and publishes across connected social channels.',
-    links: [{ label: 'site', href: 'https://brandale.ai/' }],
   },
   {
     name: 'MathGPT',
@@ -139,7 +135,6 @@ const PROJECTS: Item[] = [
     name: 'Sketcha',
     href: 'https://github.com/clintonimaroo/Sketcha',
     body: 'cursor for electrical design. describe a circuit or a space in plain language and get a clean electrical and architectural diagram, no cad needed. open source.',
-    links: [{ label: 'github', href: 'https://github.com/clintonimaroo/Sketcha' }],
   },
 ]
 
