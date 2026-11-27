@@ -315,7 +315,7 @@ export default function Home() {
 
       {posts.length > 0 && (
         <section>
-          <h2>Recent writing</h2>
+          <h2>Some things I&apos;ve written</h2>
           <div className="posts">
             {posts.map((post) => (
               <Link href={`/writing/${post.slug}`} className="post-row" key={post.slug}>
