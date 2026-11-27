@@ -222,7 +222,7 @@ export default function Home() {
           drones that can find their own way through fire and flooding.
         </p>
         <p>
-          based in san francisco. i started shipping as a teenager in nigeria, founded{' '}
+          based in the united states. i started shipping as a teenager in nigeria, founded{' '}
           <span className="em">Code Space</span> at 16 and grew it to 5,000+ young builders across africa, co-founded{' '}
           <span className="em">Fathom</span>, and worked on ml at <span className="em">Apple</span> and cloud at{' '}
           <span className="em">Microsoft</span>. mostly in python, pytorch and typescript. two papers accepted at{' '}
