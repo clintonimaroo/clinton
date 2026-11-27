@@ -225,20 +225,17 @@ export default function Home() {
 
       <section className="bio">
         <p className="lead">
-          i build ai products and the communities that grow the people who&apos;ll build the next ones.
+          i&apos;m an engineer and founder. i build autonomous systems where ai meets the physical world, the perception
+          and planning behind them, and the communities that grow the people who&apos;ll build them. lately that means
+          drones that can find their own way through fire and flooding.
         </p>
         <p>
-          i&apos;m an engineer and founder. right now i&apos;m working on autonomous drone navigation for disaster
-          response, pairing computer vision with reinforcement learning so uavs can find safe paths through fire and
-          flooding. that work has two papers accepted at <span className="em">ITC 2026</span>.
+          based in san francisco. i started shipping as a teenager in nigeria, founded{' '}
+          <span className="em">Code Space</span> at 16 and grew it to 5,000+ young builders across africa, co-founded{' '}
+          <span className="em">Fathom</span>, and worked on ml at <span className="em">Apple</span> and cloud at{' '}
+          <span className="em">Microsoft</span>. mostly in python, pytorch and typescript. two papers accepted at{' '}
+          <span className="em">ITC 2026</span>. not everything i&apos;ve built worked, and that part taught me the most.
         </p>
-        <p>
-          before that i co-founded <span className="em">Fathom</span>, voice-first code intelligence for engineering teams,
-          which placed 2nd at the openai startup hackathon. i also founded <span className="em">Code Space</span>, a
-          nonprofit that has grown to 5,000+ young builders across africa, and worked on ml at{' '}
-          <span className="em">Apple</span> and cloud at <span className="em">Microsoft</span>.
-        </p>
-        <p>i live in san francisco.</p>
       </section>
 
       <section className="now">
