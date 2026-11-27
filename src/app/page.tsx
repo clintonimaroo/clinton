@@ -71,7 +71,7 @@ const WORK: Role[] = [
       <>
         voice-first code intelligence for engineering teams whose first language isn&apos;t english. parallel agents for
         codebase understanding, multilingual voice queries and visual maps. <span className="em">2nd place</span> at the
-        openai gpt-5 startup hackathon.
+        openai startup hackathon.
       </>
     ),
   },
@@ -159,7 +159,7 @@ const TALKS: { name: string; href: string; tag: string }[] = [
 const AWARDS: { year: string; name: string; by: string }[] = [
   { year: '2026', name: 'First place, Morgan TechFest', by: 'Morgan State University' },
   { year: '2025', name: 'First place, Python track', by: 'JPMorgan Chase Data for Good' },
-  { year: '2025', name: 'Second place, GPT-5 Startup Hackathon', by: 'OpenAI' },
+  { year: '2025', name: 'Second place, Startup Hackathon', by: 'OpenAI' },
   { year: '2025', name: 'Third place, AI track', by: 'BisonBytes, Howard University' },
   { year: '2024', name: 'First place, AI track', by: 'Google Hackathon' },
   { year: '2022', name: 'Most Influential Tech Personality', by: 'Young Africa Choice Award' },

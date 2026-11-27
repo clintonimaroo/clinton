@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 const themeScript = `(function(){document.documentElement.dataset.theme='light'})()`
 
 const description =
-  'Clinton Imaro is a Nigerian software engineer, ML engineer, startup founder and product leader based in San Francisco. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple.'
+  'Clinton Imaro is a Nigerian software engineer, ML engineer, startup founder and product leader based in San Francisco. Co-founded Fathom (2nd place, OpenAI Startup Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple.'
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro',
@@ -167,7 +167,7 @@ export default function RootLayout({
                 },
               ],
               award: [
-                'GPT-5 OpenAI Startup Hackathon - 2nd Place',
+                'OpenAI Startup Hackathon - 2nd Place',
                 'JPMorgan Data for Good Hackathon 2025 - 1st Place (Python Track)',
                 'Google Hackathon 2024 - 1st Place (AI Track)',
                 'Howard University BisonBytes 2025 - 3rd Place (AI Track)',
