@@ -1,8 +1,8 @@
 <!-- Created by Clinton Imaro on 27th November 2026. -->
 ---
-title: three countries, one career
+title: build with nothing, build properly, build big
 date: 2026-11-27
-tag: career
+tag: building
 summary: nigeria taught me to build with nothing, belgium taught me to build properly, and the united states taught me to build big. what each one gave me, and why i needed all three.
 draft: true
 ---
