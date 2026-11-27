@@ -68,8 +68,6 @@ const LINKS: SocialLink[] = [
   },
 ]
 
-const EMAIL = 'hi@clintonimaro.com'
-
 export default function Footer() {
   return (
     <footer className="home site-end">
@@ -94,9 +92,6 @@ export default function Footer() {
         )}
       </div>
 
-      <p className="email">
-        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-      </p>
       <p className="updated">last updated: 11/2026</p>
     </footer>
   )
