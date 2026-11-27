@@ -19,7 +19,7 @@ const WORK: Role[] = [
     years: '2026 to now',
     title: 'Co-founder & Lead Engineer',
     org: 'Lane',
-    body: 'a dealer management system with an agent built in. dealerships run inventory, customers, paperwork and listings from one dashboard, and the agent takes work off their hands over chat, imessage and phone calls. live with its first dealership in texas.',
+    body: 'an ai teammate for car dealers. it sources cars at auction, lists them, handles the paperwork and follows up with buyers over imessage and phone calls, so a small lot runs like a big one.',
   },
   {
     years: '2021 to now',
