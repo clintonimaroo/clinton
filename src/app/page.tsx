@@ -10,15 +10,6 @@ function Ext({ href, children, className }: { href: string; children: React.Reac
   )
 }
 
-function Brand({ logo, name, wordmark }: { logo: string; name: string; wordmark?: boolean }) {
-  return (
-    <span className={wordmark ? `brand wordmark ${logo}` : 'brand'}>
-      <img src={`/images/logos/${logo}.png`} alt={wordmark ? name : ''} />
-      {!wordmark && name}
-    </span>
-  )
-}
-
 type Item = { name: string; href?: string; tag: string; body: React.ReactNode; links?: { label: string; href: string }[] }
 
 type Role = { years: string; title: string; org: string; href?: string; tag?: string; body: React.ReactNode; items?: Item[] }
@@ -39,8 +30,8 @@ const WORK: Role[] = [
       <>
         a nonprofit creating opportunities for young builders across africa. what began in 2021 as a whatsapp group
         has grown into a community of <span className="em">5,000+</span> members, running workshops, hackathons and
-        events with partners including <Brand logo="aws" name="AWS" wordmark />, <Brand logo="paystack" name="Paystack" />,{' '}
-        <Brand logo="wix" name="Wix" wordmark /> and <Brand logo="couchbase" name="Couchbase" />. i lead strategy, partnerships and
+        events with partners including <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
+        <span className="em">Wix</span> and <span className="em">Couchbase</span>. i lead strategy, partnerships and
         programmes, and our flagship event has put over <span className="em">1,200</span> builders in one room to ship real
         products.
       </>
@@ -61,18 +52,14 @@ const WORK: Role[] = [
   },
   {
     years: '2025 to now',
-    title: 'Undergraduate Researcher',
-    org: 'Morgan State, CEAMLS',
+    title: 'Robotics Researcher',
+    org: 'Morgan State',
     href: 'https://www.morgan.edu/',
     body: (
       <>
-        autonomous uav navigation for disaster response. built the vision-based hazard classifier (
-        <span className="em">mobilenetv2, 85.2% accuracy, 18.5ms</span>) and the ppo agents that plan around it, with
-        two papers accepted at <span className="em">ITC 2026</span> under{' '}
-        <Ext href="https://ieeexplore.ieee.org/author/37086069468" className="em">
-          Dr. Peter Taiwo
-        </Ext>
-        .
+        autonomous drones for disaster response. building the perception and planning stack that lets a uav spot fire
+        and flooding from the air and route around it on its own, with vision that runs onboard in real time. two papers
+        accepted at <span className="em">ITC 2026</span>.
       </>
     ),
   },
@@ -244,8 +231,8 @@ export default function Home() {
         <p>
           based in san francisco. i started shipping as a teenager in nigeria, founded{' '}
           <span className="em">Code Space</span> at 16 and grew it to 5,000+ young builders across africa, co-founded{' '}
-          <span className="em">Fathom</span>, and worked on ml at <Brand logo="apple" name="Apple" /> and cloud at{' '}
-          <Brand logo="microsoft" name="Microsoft" />. mostly in python, pytorch and typescript. two papers accepted at{' '}
+          <span className="em">Fathom</span>, and worked on ml at <span className="em">Apple</span> and cloud at{' '}
+          <span className="em">Microsoft</span>. mostly in python, pytorch and typescript. two papers accepted at{' '}
           <span className="em">ITC 2026</span>. not everything i&apos;ve built worked, and that part taught me the most.
         </p>
       </section>
