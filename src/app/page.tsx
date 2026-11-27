@@ -16,12 +16,6 @@ type Role = { years: string; title: string; org: string; href?: string; tag?: st
 
 const WORK: Role[] = [
   {
-    years: '2026 to now',
-    title: 'Co-founder & Lead Engineer',
-    org: 'Lane',
-    body: 'independent dealers run on texts, spreadsheets and memory. lane puts an agent in the middle: it watches auctions, lists cars, files paperwork and follows up with buyers by imessage and phone.',
-  },
-  {
     years: '2021 to now',
     title: 'Founder',
     org: 'Code Space',
@@ -103,6 +97,11 @@ const WORK: Role[] = [
 ]
 
 const PROJECTS: Item[] = [
+  {
+    name: 'Lane',
+    tag: '2026',
+    body: 'independent dealers run on texts, spreadsheets and memory. lane puts an agent in the middle: it watches auctions, lists cars, files paperwork and follows up with buyers by imessage and phone.',
+  },
   {
     name: 'Kard',
     href: 'https://kard-pink.vercel.app/',
