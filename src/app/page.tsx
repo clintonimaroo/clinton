@@ -216,7 +216,7 @@ export default function Home() {
           <div className="name-row">
             <h1>Clinton Imaro</h1>
           </div>
-          <p className="tagline">ml, product, infra.</p>
+          <p className="tagline">ml, robotics, product, infra.</p>
           <p className="intro-email">
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </p>
