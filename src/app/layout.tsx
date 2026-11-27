@@ -1,16 +1,27 @@
 import type { Metadata, Viewport } from 'next'
+import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
 import '../styles/globals.scss'
+import '../styles/home.scss'
+
+const dmMono = localFont({
+  src: [
+    { path: '../fonts/dm-mono-latin-300-normal.woff2', weight: '300', style: 'normal' },
+    { path: '../fonts/dm-mono-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/dm-mono-latin-500-normal.woff2', weight: '500', style: 'normal' },
+  ],
+  variable: '--font-dm-mono',
+  display: 'swap',
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#ededed',
+  themeColor: '#ffffff',
 }
 
-// Light by default; runs before first paint so a saved dark choice never flashes light.
-const themeScript = `(function(){var t='light';try{if(localStorage.getItem('theme')==='dark'){t='dark'}}catch(e){}document.documentElement.dataset.theme=t})()`
+const themeScript = `(function(){document.documentElement.dataset.theme='light'})()`
 
 const description =
   'Clinton Imaro is a Nigerian software engineer, ML engineer, startup founder and product leader based in San Francisco. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple.'
@@ -68,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={dmMono.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />

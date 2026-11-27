@@ -1,0 +1,259 @@
+// Created by Clinton Imaro on 27th November 2026.
+:root {
+  --background: #ffffff;
+}
+
+html {
+  font-size: 15px;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: var(--font-dm-mono), 'DM Mono', monospace;
+  background-color: var(--background);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.home {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px 0;
+
+  @media (max-width: 640px) {
+    padding: 60px 20px 0;
+  }
+
+  &.site-end {
+    padding: 0 20px 80px;
+
+    @media (max-width: 640px) {
+      padding: 0 20px 60px;
+    }
+  }
+
+  h1 {
+    font-size: 1.72rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--text);
+  }
+
+  section {
+    margin-bottom: 50px;
+
+    @media (max-width: 640px) {
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color 0.2s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--link-hover);
+    }
+  }
+
+  .em {
+    color: var(--text);
+  }
+
+  .emphasis-link {
+    color: var(--text);
+    font-size: 1.04em;
+  }
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+
+  @media (max-width: 640px) {
+    gap: 14px;
+  }
+}
+
+.intro-text {
+  min-width: 0;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 4px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.home .tagline {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.home .intro-email {
+  margin: 2px 0 0;
+
+  a {
+    color: var(--text-secondary);
+    padding: 0;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}
+
+.home .list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: 18px;
+    text-indent: -18px;
+
+    &::before {
+      content: '• ';
+      padding-right: 8px;
+    }
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 0;
+
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+}
+
+.home .project {
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.18rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 5px;
+    color: var(--text);
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+
+  .list {
+    margin-top: 6px;
+    gap: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.home .see-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text);
+}
+
+.home .links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  a {
+    color: var(--text-secondary);
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+}
+
+.home .email {
+  margin-top: 48px;
+  color: var(--text-secondary);
+
+  a {
+    color: var(--text-secondary);
+    padding: 0;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}

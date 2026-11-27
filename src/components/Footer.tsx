@@ -1,5 +1,3 @@
-'use client'
-
 import type { ReactNode } from 'react'
 
 type SocialLink = {
@@ -35,7 +33,7 @@ const LINKS: SocialLink[] = [
   },
   {
     name: 'X',
-    href: 'https://x.com/clintonimaroo',
+    href: 'https://x.com/clintonimaro',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -58,76 +56,29 @@ const LINKS: SocialLink[] = [
   },
 ]
 
-function toggleTheme() {
-  const root = document.documentElement
-  const next = root.dataset.theme === 'dark' ? 'light' : 'dark'
-  root.dataset.theme = next
-
-  try {
-    localStorage.setItem('theme', next)
-  } catch {
-    // Storage can be blocked (private mode); the toggle still works for this visit.
-  }
-}
+const EMAIL = 'hi@clintonimaro.com'
 
 export default function Footer() {
   return (
-    <footer className="container site-footer">
-      <div className="footer-bottom">
-        <span>© {new Date().getFullYear()}, C. Imaro</span>
-        <span className="footer-links">
-          <div className="marquee">
-            <div className="marquee-track">
-              <ul className="marquee-list">
-                {LINKS.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-label={`Clinton Imaro on ${link.name} (opens in a new tab)`}
-                      title={link.name}
-                    >
-                      {link.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Duplicate copy so the loop has no gap; hidden from assistive tech. */}
-              <ul className="marquee-list" aria-hidden="true">
-                {LINKS.map((link) => (
-                  <li key={`${link.href}-loop`}>
-                    <a href={link.href} rel="noopener noreferrer" target="_blank" tabIndex={-1} aria-label={link.name}>
-                      {link.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="marquee-fade-l" aria-hidden="true" />
-            <div className="marquee-fade-r" aria-hidden="true" />
-          </div>
-
-          <button className="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme" onClick={toggleTheme}>
-            <svg className="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2" />
-              <path d="M12 20v2" />
-              <path d="m4.93 4.93 1.41 1.41" />
-              <path d="m17.66 17.66 1.41 1.41" />
-              <path d="M2 12h2" />
-              <path d="M20 12h2" />
-              <path d="m6.34 17.66-1.41 1.41" />
-              <path d="m19.07 4.93-1.41 1.41" />
-            </svg>
-            <svg className="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-          </button>
-        </span>
+    <footer className="home site-end">
+      <div className="links">
+        {LINKS.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label={`Clinton Imaro on ${link.name} (opens in a new tab)`}
+            title={link.name}
+          >
+            {link.icon}
+          </a>
+        ))}
       </div>
+
+      <p className="email">
+        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      </p>
     </footer>
   )
 }
