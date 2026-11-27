@@ -113,7 +113,7 @@ export default function Home() {
 
       <section id="intro" className="intro-section">
         <p>
-          Today currently building Siri for codebase at{' '}
+          Previously built Siri for codebase at{' '}
           <a
             href="https://heyfathom.com"
             target="_blank"
