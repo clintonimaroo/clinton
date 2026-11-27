@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: 'https://clintonimaro.com/images/profile.jpg',
+        url: 'https://clintonimaro.com/images/profile.JPG',
         width: 1200,
         height: 630,
         alt: 'Clinton Imaro',
       },
       {
-        url: 'https://clintonimaro.com/images/profile-square.jpg',
+        url: 'https://clintonimaro.com/images/profile-square.JPG',
         width: 400,
         height: 400,
         alt: 'Clinton Imaro',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     site: '@clintonimaro',
     title: 'Clinton Imaro',
     description,
-    images: ['https://clintonimaro.com/images/profile.jpg'],
+    images: ['https://clintonimaro.com/images/profile.JPG'],
   },
   alternates: {
     canonical: 'https://clintonimaro.com',
@@ -93,13 +93,13 @@ export default function RootLayout({
               image: [
                 {
                   '@type': 'ImageObject',
-                  url: 'https://clintonimaro.com/images/profile.jpg',
+                  url: 'https://clintonimaro.com/images/profile.JPG',
                   width: 1200,
                   height: 630,
                 },
                 {
                   '@type': 'ImageObject',
-                  url: 'https://clintonimaro.com/images/profile-square.jpg',
+                  url: 'https://clintonimaro.com/images/profile-square.JPG',
                   width: 400,
                   height: 400,
                 },
