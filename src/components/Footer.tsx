@@ -6,6 +6,8 @@ type SocialLink = {
   icon: ReactNode
 }
 
+const SCHOLAR_URL = ''
+
 const LINKS: SocialLink[] = [
   {
     name: 'GitHub',
@@ -54,6 +56,16 @@ const LINKS: SocialLink[] = [
       </svg>
     ),
   },
+  {
+    name: 'Google Scholar',
+    href: SCHOLAR_URL,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 3 1.5 9.5 12 16l8-4.95V17h2V9.5L12 3Z" fill="currentColor" />
+        <path d="M6 13.4v3.35C6 18.6 8.7 20.5 12 20.5s6-1.9 6-3.75V13.4L12 17.1l-6-3.7Z" fill="currentColor" />
+      </svg>
+    ),
+  },
 ]
 
 const EMAIL = 'hi@clintonimaro.com'
@@ -62,7 +74,7 @@ export default function Footer() {
   return (
     <footer className="home site-end">
       <div className="links">
-        {LINKS.map((link) => (
+        {LINKS.filter((link) => link.href).map((link) => (
           <a
             key={link.href}
             href={link.href}
