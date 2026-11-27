@@ -26,11 +26,11 @@ export const WORKS: WorkCard[] = [
     hover: { src: '/images/work/fathom-team.webp', left: 0, top: 0, width: 450, height: 300 },
     block: {
       description:
-        'Voice-first AI for code comprehension - parallel agents, multilingual voice queries, and visual mapping. Winner at the OpenAI Startup Hackathon.',
-      award: 'Winner at the OpenAI Startup Hackathon.',
+        'Voice-first AI for code comprehension - parallel agents, multilingual voice queries, and visual mapping. Second place at the OpenAI startup hackathon.',
+      award: 'Second place at the OpenAI startup hackathon.',
       descLink: {
-        text: 'OpenAI Startup Hackathon',
-        href: 'https://www.linkedin.com/posts/200-startup-teams-were-able-to-ship-fast-ugcPost-7379229907295293441-dY8b/',
+        text: 'OpenAI startup hackathon',
+        href: 'https://www.linkedin.com/feed/update/urn:li:activity:7386971045099892736/',
       },
       link: 'View Live Site',
       href: 'https://www.heyfathom.com/',
@@ -187,7 +187,7 @@ export const WORKS: WorkCard[] = [
     art: [{ src: '/images/work/uav-drone.webp', left: 0, top: 0, width: 450, height: 285 }],
     block: {
       description:
-        'Pairs a CNN hazard classifier with a PPO agent so a UAV can route around fire and flooding. Reached 99% and 100% goal success on sparse and moderate maps.',
+        'Pairs a CNN hazard classifier with a PPO agent so a UAV can spot fire and flooding and route around them on its own. Two papers accepted at ITC 2026.',
       link: 'View on GitHub',
       href: 'https://github.com/clintonimaroo/uav-research',
       locked: 'Read Paper',

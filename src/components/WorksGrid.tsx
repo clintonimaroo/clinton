@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import Link from 'next/link'
+
 import { WORKS } from '@/lib/works'
 import type { WorkBox, WorkCard, WorkVideo } from '@/types'
 
@@ -30,17 +32,6 @@ const boxStyle = (box: WorkBox) => ({
   width: `calc(${box.width}px * var(--k, 1))`,
   height: `calc(${box.height}px * var(--k, 1))`,
 })
-
-const ARROW = (
-  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-    <path
-      d="M4.5 3.32516L8.4577 3.54232L8.6748 7.5M8.25 3.75L3.25 8.75"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
 
 function TileVideo({ video, name }: { video: WorkVideo; name?: string }) {
   const ref = useRef<HTMLVideoElement>(null)
@@ -362,7 +353,10 @@ export default function WorksGrid() {
   return (
     <section className="works" id="works">
       <div className="works-head">
-        <span>Selected Work</span>
+        <span className="works-title">
+          <Link href="/">clinton imaro</Link>
+          <span>/ work</span>
+        </span>
 
         <div className="works-filters">
           {FILTERS.map((filter) => (
@@ -406,7 +400,6 @@ export default function WorksGrid() {
                 .join(' ')}
               style={{
                 background: card.background,
-                border: card.border === false ? 'none' : `0.6px solid ${card.border ?? '#e4e4e4'}`,
               }}
             >
               {card.video && <TileVideo video={card.video} name={card.name} />}
@@ -451,7 +444,6 @@ export default function WorksGrid() {
                         aria-label={`${card.block.second.label}: ${card.name}`}
                       >
                         {card.block.second.label}
-                        {ARROW}
                       </a>
                     ) : (
                       card.block.locked && (
@@ -470,7 +462,6 @@ export default function WorksGrid() {
                         aria-label={`${card.block.link}: ${card.name}`}
                       >
                         {card.block.link}
-                        {ARROW}
                       </a>
                     )}
                   </div>
