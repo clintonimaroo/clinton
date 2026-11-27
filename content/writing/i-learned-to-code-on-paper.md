@@ -9,7 +9,7 @@ draft: true
 
 For most of my first year as a programmer, I did not own a laptop.
 
-I was a teenager in Abuja, and I had just finished a Java bootcamp. Since I had nothing to run my code on, I wrote it by hand in a notebook. Whenever I could, I walked to a friend's house near our church, because his family ran a generator and ours did not, and I typed everything in to see whether any of it worked. Most of the time it did not. I would fix what I could on his laptop, go home, and start writing the next thing on paper.
+I was a teenager in Abuja, and I had just finished a Java bootcamp. Since I had nothing to run my code on, I wrote it by hand in a notebook. Whenever I could, I walked to a friend's house near our church, because his area had steady electricity and ours did not. There I typed everything in to see whether any of it worked. Most of the time it did not. I would fix what I could on his laptop, go home, and start writing the next thing on paper.
 
 That was 2017. Since then I have built a career across three countries: Nigeria, Belgium and the United States. I have worked at Apple and Microsoft, started a community that now has more than 5,000 members, and co-founded a startup that did not make it.
 
