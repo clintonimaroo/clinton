@@ -10,7 +10,7 @@ function Ext({ href, children, className }: { href: string; children: React.Reac
   )
 }
 
-type Item = { name: string; href?: string; tag: string; body: React.ReactNode; links?: { label: string; href: string }[] }
+type Item = { name: string; href?: string; tag?: string; body: React.ReactNode; links?: { label: string; href: string }[] }
 
 type Role = { years: string; title: string; org: string; href?: string; tag?: string; body: React.ReactNode; items?: Item[] }
 
@@ -106,41 +106,40 @@ const PROJECTS: Item[] = [
   {
     name: 'Kard',
     href: 'https://kard-pink.vercel.app/',
-    tag: 'fintech · 2023 to 2024',
-    body: "gen z in nigeria kept getting locked out of global payments, so i built kard: a dedicated usd or ngn account number, plus physical and virtual cards that work with apple pay. i founded it and led the build end to end.",
+    tag: '2023 to 2024',
+    body: 'global payments for gen z in nigeria. a dedicated usd or ngn account number, plus physical and virtual cards that work with apple pay. founder and lead developer.',
     links: [{ label: 'site', href: 'https://kard-pink.vercel.app/' }],
   },
   {
     name: 'Becky',
     href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078',
-    tag: 'ios · live',
-    body: 'matchmaking for marriage-ready singles. it matches on values and readiness instead of swipes, and only opens chat once both sides agree. i was the founding engineer and built the ios and android apps and the matching algorithm, then handed it to the in-house team at 2,163 users.',
+    tag: 'ios and android',
+    body: 'matchmaking for marriage-ready singles, matching on values and readiness instead of swipes. built the apps and the matching algorithm as founding engineer, then handed over at 2,163 users.',
     links: [{ label: 'app store', href: 'https://apps.apple.com/us/app/becky-match-connect-marry/id6757434078' }],
   },
   {
     name: 'QuietGlass',
     href: 'https://github.com/clintonimaroo/quietglass',
-    tag: 'mac app · open source',
-    body: 'a native macos app that frosts your screen the moment you look away, using your airpods or the camera. everything runs on device, nothing leaves your mac.',
+    tag: 'macos',
+    body: 'privacy for your screen. frosts it the moment you look away, using your airpods or the camera, with everything running on device. open source.',
     links: [{ label: 'github', href: 'https://github.com/clintonimaroo/quietglass' }],
   },
   {
     name: 'BrandALE',
     href: 'https://brandale.ai/',
     tag: 'live',
-    body: 'finds breakout branded content, ranks the creators behind it, then repurposes the winning posts and publishes them across connected social channels.',
+    body: 'content engine for brands. finds breakout branded posts, ranks the creators behind them, then repurposes the winners and publishes across connected social channels.',
     links: [{ label: 'site', href: 'https://brandale.ai/' }],
   },
   {
     name: 'MathGPT',
-    tag: 'mobile · private',
-    body: 'an ai math solver and homework helper. step-by-step solutions, ai video explanations and a photo solver, covering algebra through calculus.',
+    tag: 'mobile',
+    body: 'ai math tutor for students. step-by-step solutions, video explanations and a photo solver, from algebra through calculus.',
   },
   {
     name: 'Sketcha',
     href: 'https://github.com/clintonimaroo/Sketcha',
-    tag: 'open source',
-    body: 'cursor for electrical design. describe a circuit or a space in plain language and get a clean electrical and architectural diagram, without touching cad.',
+    body: 'cursor for electrical design. describe a circuit or a space in plain language and get a clean electrical and architectural diagram, no cad needed. open source.',
     links: [{ label: 'github', href: 'https://github.com/clintonimaroo/Sketcha' }],
   },
 ]
@@ -187,7 +186,7 @@ function ItemRow({ item }: { item: Item }) {
         ) : (
           <span className="em">{item.name}</span>
         )}
-        <span className="tag">{item.tag}</span>
+        {item.tag && <span className="tag">{item.tag}</span>}
       </p>
       <p>{item.body}</p>
       {item.links && (

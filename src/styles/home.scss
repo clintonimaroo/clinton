@@ -117,6 +117,11 @@ body {
   border-radius: 0;
   object-fit: cover;
   filter: grayscale(1) contrast(1.05);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: none;
+  }
   flex-shrink: 0;
 
   @media (max-width: 640px) {
