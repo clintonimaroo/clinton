@@ -19,7 +19,7 @@ const WORK: Role[] = [
     years: '2026 to now',
     title: 'Co-founder & Lead Engineer',
     org: 'Lane',
-    body: 'independent dealers run on texts, spreadsheets and memory. lane puts an agent in the middle of that: it watches auctions, lists cars, files the paperwork and follows up with buyers by imessage and phone. i lead engineering across the agent, voice and browser automation.',
+    body: 'independent dealers run on texts, spreadsheets and memory. lane puts an agent in the middle: it watches auctions, lists cars, files paperwork and follows up with buyers by imessage and phone.',
   },
   {
     years: '2021 to now',
@@ -28,12 +28,8 @@ const WORK: Role[] = [
     href: 'https://www.codespaces.org/',
     body: (
       <>
-        a nonprofit creating opportunities for young builders across africa. what began in 2021 as a whatsapp group
-        has grown into a community of <span className="em">5,000+</span> members, running workshops, hackathons and
-        events with partners including <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
-        <span className="em">Wix</span> and <span className="em">Couchbase</span>. i lead strategy, partnerships and
-        programmes, and our flagship event has put over <span className="em">1,200</span> builders in one room to ship real
-        products.
+        a nonprofit creating opportunities for young builders across africa. what began in 2021 as a whatsapp group is
+        now <span className="em">5,000+</span> members, with events backed by AWS, Paystack, Wix and Couchbase.
       </>
     ),
     items: [
@@ -57,9 +53,8 @@ const WORK: Role[] = [
     href: 'https://www.morgan.edu/',
     body: (
       <>
-        autonomous drones for disaster response. building the perception and planning stack that lets a uav spot fire
-        and flooding from the air and route around it on its own, with vision that runs onboard in real time. two papers
-        accepted at <span className="em">ITC 2026</span>.
+        autonomous drones for disaster response: perception and planning that let a uav spot fire and flooding and route
+        around it on its own. two papers accepted at <span className="em">ITC 2026</span>.
       </>
     ),
   },
@@ -70,14 +65,12 @@ const WORK: Role[] = [
     href: 'https://www.heyfathom.com/',
     body: (
       <>
-        voice-first code intelligence. engineers asked questions about a codebase out loud, in their own language, and
-        got answers grounded in the code, with parallel agents mapping how it all fit together. we ran a closed beta with{' '}
-        <span className="em">258 engineers</span> across the us, uk and asia, reached{' '}
-        <span className="em">60,000+ queries a month</span> and took <span className="em">2nd</span> at{' '}
+        voice-first code intelligence for engineering teams. closed beta with <span className="em">258 engineers</span>{' '}
+        across the us, uk and asia, 60,000+ queries a month and 2nd at{' '}
         <Ext href="https://www.linkedin.com/feed/update/urn:li:activity:7386971045099892736/" className="em">
           openai startup
         </Ext>
-        . i led product and engineering as ceo.
+        . led product and engineering as ceo.
       </>
     ),
   },
@@ -99,8 +92,7 @@ const WORK: Role[] = [
     years: '2021 to 2023',
     title: 'Software Engineer',
     org: 'Go! Talent',
-    tag: 'belgium',
-    body: 'real-time dashboards for staff absence and device inventory across school campuses, replacing spreadsheets.',
+    body: 'part of GO!, the public education network of flanders. owned the school\'s software end to end, building and running the systems staff and students relied on every day.',
   },
   {
     years: 'earlier',
