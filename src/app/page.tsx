@@ -16,6 +16,13 @@ type Role = { years: string; title: string; org: string; href?: string; tag?: st
 
 const WORK: Role[] = [
   {
+    years: '2026 to now',
+    title: 'Co-founder & Lead Engineer',
+    org: 'Lane',
+    tag: 'agentic dms',
+    body: 'a dealer management system with an agent built in. dealerships run inventory, customers, paperwork and listings from one dashboard, and the agent takes work off their hands over chat, imessage and phone calls. live with its first dealership in texas.',
+  },
+  {
     years: '2021 to now',
     title: 'Founder',
     org: 'Code Space',
