@@ -230,8 +230,8 @@ export default function Home() {
       <section className="now">
         <p className="now-label">now · november 2026</p>
         <p>
-          working on autonomous drone navigation and getting code space ready for its biggest year yet in 2027. two
-          papers on uav navigation are on their way out through itc.
+          building lane, an agent that runs the back office for car dealerships, and teaching drones to find their own
+          way through disasters. also getting code space ready for its biggest year yet in 2027. more soon.
         </p>
       </section>
 
