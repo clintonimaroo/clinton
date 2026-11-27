@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 const themeScript = `(function(){var t='light';try{if(localStorage.getItem('theme')==='dark'){t='dark'}}catch(e){}document.documentElement.dataset.theme=t})()`
 
 const description =
-  'Software engineer, ML engineer, and founder. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 10,000+ members. Former ML Engineer Intern at Apple. 100+ tech talks worldwide.'
+  'Software engineer, ML engineer, and founder. Co-founded Fathom (2nd place, GPT-5 OpenAI Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple. 100+ tech talks worldwide.'
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro',
@@ -105,7 +105,7 @@ export default function RootLayout({
               ],
               jobTitle: ['Software Engineer', 'ML Engineer', 'Founder'],
               description:
-                'Software engineer, ML engineer, and founder. Co-founded Fathom, AI code intelligence for engineering teams. Founded Code Space (10,000+ members). Former ML Engineer Intern at Apple. Undergraduate researcher at Morgan State University. 100+ tech talks worldwide. Published at ITC 2026.',
+                'Software engineer, ML engineer, and founder. Co-founded Fathom, AI code intelligence for engineering teams. Founded Code Space (5,000+ members). Former ML Engineer Intern at Apple. Undergraduate researcher at Morgan State University. 100+ tech talks worldwide. Published at ITC 2026.',
               birthDate: '2004-06-26',
               birthPlace: {
                 '@type': 'Place',
@@ -119,7 +119,7 @@ export default function RootLayout({
                   name: 'Code Space',
                   url: 'https://www.codespaces.org',
                   roleName: 'Founder',
-                  description: 'Nonprofit tech community with 10,000+ members across Africa, organizing one of West Africa\'s largest annual hackathons.',
+                  description: 'Nonprofit tech community with 5,000+ members across Africa, organizing one of West Africa\'s largest annual hackathons.',
                   foundingDate: '2021',
                 },
               ],

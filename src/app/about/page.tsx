@@ -78,7 +78,7 @@ export default function About() {
               Code Space
             </a>
             , a nonprofit community dedicated to connecting, educating, and providing opportunities to Gen Z developers
-            and tech enthusiasts across Africa. We&apos;ve grown to support over 10,000+ young tech talents through
+            and tech enthusiasts across Africa. We&apos;ve grown to support over 5,000 young tech talents through
             hackathons, tech events, and educational programs.
           </p>
         </div>
