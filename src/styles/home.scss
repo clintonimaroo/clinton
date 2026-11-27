@@ -257,3 +257,130 @@ body {
     }
   }
 }
+
+.home .bio {
+  .lead {
+    color: var(--text);
+    font-size: 1.18rem;
+    line-height: 1.45;
+  }
+}
+
+.home .now {
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 18px 20px;
+
+  .now-label {
+    font-size: 0.87rem;
+    margin-bottom: 8px;
+  }
+
+  p:last-child {
+    color: var(--text);
+  }
+}
+
+.home .tag {
+  color: var(--text-secondary);
+  font-size: 0.87rem;
+  margin-left: 10px;
+}
+
+.home .roles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.home .role {
+  .years {
+    font-size: 0.87rem;
+    margin-bottom: 4px;
+  }
+
+  h3 {
+    font-size: 1.18rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    color: var(--text);
+
+    a {
+      padding: 0;
+    }
+  }
+
+  > p:not(.years) {
+    margin-bottom: 0;
+  }
+
+  .items {
+    margin-top: 16px;
+  }
+}
+
+.home .items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home .item {
+  p {
+    margin-bottom: 0;
+  }
+
+  .item-head {
+    margin-bottom: 2px;
+
+    a {
+      padding: 0;
+    }
+  }
+}
+
+.home .role .item {
+  padding-left: 18px;
+}
+
+.home .more {
+  margin-top: 20px;
+}
+
+.home .talks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    color: var(--text-secondary);
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+.home .awards {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    display: flex;
+    gap: 18px;
+    color: var(--text-secondary);
+  }
+
+  .year {
+    flex-shrink: 0;
+    width: 3.2em;
+  }
+
+  .tag {
+    margin-left: 10px;
+  }
+}
