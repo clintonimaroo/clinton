@@ -73,8 +73,11 @@ const WORK: Role[] = [
         voice-first code intelligence. engineers asked questions about a codebase out loud, in their own language, and
         got answers grounded in the code, with parallel agents mapping how it all fit together. we ran a closed beta with{' '}
         <span className="em">258 engineers</span> across the us, uk and asia, reached{' '}
-        <span className="em">60,000+ queries a month</span> and took <span className="em">2nd</span> at the openai
-        startup hackathon. i led product and engineering as ceo.
+        <span className="em">60,000+ queries a month</span> and took <span className="em">2nd</span> at{' '}
+        <Ext href="https://www.linkedin.com/feed/update/urn:li:activity:7386971045099892736/" className="em">
+          openai startup
+        </Ext>
+        . i led product and engineering as ceo.
       </>
     ),
   },
@@ -272,7 +275,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>Projects</h2>
+        <h2>Things I&apos;ve built</h2>
         <ShowMore className="items" visible={3}>
           {PROJECTS.map((item) => (
             <ItemRow item={item} key={item.name} />
