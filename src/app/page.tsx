@@ -228,20 +228,24 @@ export default function Home() {
           i build ai products and the communities that grow the people who&apos;ll build the next ones.
         </p>
         <p>
-          based in san francisco. i founded <span className="em">Code Space</span> in 2021 and grew it to 5,000+
-          members, with events backed by aws, paystack and wix. i co-founded <span className="em">Fathom</span>, which took
-          2nd at the openai startup hackathon and ran a closed beta with 158 engineers. before that, ml on siri at{' '}
-          <span className="em">Apple</span> and cloud at <span className="em">Microsoft</span>. google named me the
-          youngest developer from africa in 2021. now studying computer science at{' '}
-          <span className="em">Morgan State</span>, researching drone navigation for disaster response. first-gen.
+          i&apos;m an engineer and founder. right now i&apos;m working on autonomous drone navigation for disaster
+          response, pairing computer vision with reinforcement learning so uavs can find safe paths through fire and
+          flooding. that work has two papers accepted at <span className="em">ITC 2026</span>.
         </p>
+        <p>
+          before that i co-founded <span className="em">Fathom</span>, voice-first code intelligence for engineering teams,
+          which placed 2nd at the openai startup hackathon. i also founded <span className="em">Code Space</span>, a
+          nonprofit that has grown to 5,000+ young builders across africa, and worked on ml at{' '}
+          <span className="em">Apple</span> and cloud at <span className="em">Microsoft</span>.
+        </p>
+        <p>i live in san francisco.</p>
       </section>
 
       <section className="now">
         <p className="now-label">now · november 2026</p>
         <p>
-          researching uav autonomy at morgan state and getting code space ready for its biggest year yet in 2027. two
-          papers on drone navigation are on their way out through itc.
+          working on autonomous drone navigation and getting code space ready for its biggest year yet in 2027. two
+          papers on uav navigation are on their way out through itc.
         </p>
       </section>
 
