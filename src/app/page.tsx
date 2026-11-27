@@ -26,14 +26,12 @@ const WORK: Role[] = [
     title: 'Founder',
     org: 'Code Space',
     href: 'https://www.codespaces.org/',
-    tag: 'nonprofit',
     body: (
       <>
-        i started code space as a whatsapp group in 2021 and grew it into a nonprofit of{' '}
-        <span className="em">5,000+</span> young builders across africa. we run workshops, hackathons and events, and
-        have partnered with <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
-        <span className="em">Wix</span>, <span className="em">Couchbase</span>, <span className="em">Kora</span> and more
-        to put real opportunities in front of our members.
+        a nonprofit creating opportunities for young builders across africa. what began in 2021 as a whatsapp group
+        has grown into a community of <span className="em">5,000+</span> members, running workshops, hackathons and
+        events with partners including <span className="em">AWS</span>, <span className="em">Paystack</span>,{' '}
+        <span className="em">Wix</span> and <span className="em">Couchbase</span>.
       </>
     ),
     items: [
