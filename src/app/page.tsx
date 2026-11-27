@@ -98,7 +98,7 @@ const WORK: Role[] = [
     years: 'earlier',
     title: 'Founder',
     org: 'Afrowatch',
-    body: 'where it started. the project technext and rubies covered when i was 18.',
+    body: 'live tv streaming for africa, built for viewers paying for every megabyte. free to watch, funded by creators, and designed to stream more on less data.',
   },
 ]
 
