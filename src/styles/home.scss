@@ -427,3 +427,9 @@ body {
   align-items: center;
   color: var(--text-secondary);
 }
+
+.home section a:hover,
+.home section a:focus-visible,
+.home section a.em:hover {
+  color: var(--blue);
+}
