@@ -19,7 +19,7 @@ const WORK: Role[] = [
     years: '2026 to now',
     title: 'Co-founder & Lead Engineer',
     org: 'Lane',
-    body: 'ai-native operations platform for car dealerships. i co-founded lane to give independent dealers the back office of a large group, and lead engineering on the agents that source inventory at auction, manage listings and paperwork, and work with buyers over imessage and phone calls.',
+    body: 'independent dealers run on texts, spreadsheets and memory. lane puts an agent in the middle of that: it watches auctions, lists cars, files the paperwork and follows up with buyers by imessage and phone. i lead engineering across the agent, voice and browser automation.',
   },
   {
     years: '2021 to now',
