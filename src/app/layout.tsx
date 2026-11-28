@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       {
         url: 'https://clintonimaro.com/images/og.jpg',
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: 'Clinton Imaro',
       },
     ],
