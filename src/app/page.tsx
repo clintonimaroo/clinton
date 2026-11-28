@@ -218,8 +218,9 @@ export default function Home() {
 
       <section className="bio">
         <p className="lead">
-          i&apos;m an engineer and founder. i build things where software meets money, and the communities that grow the
-          people who&apos;ll build them.
+          i&apos;m an engineer and founder. i build things where software meets money, the products, infrastructure and ai
+          behind them, and the communities that grow the people who&apos;ll build them. lately that also means drones that
+          can find their own way through fire and flooding.
         </p>
         <p>
           based in the united states. i started shipping as a teenager in nigeria, founded{' '}
