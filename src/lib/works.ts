@@ -260,7 +260,7 @@ export const WORKS: WorkCard[] = [
     block: {
       description: 'A community where Gen Z developers, founders and designers across Africa come to build.',
       link: 'View Live Site',
-      href: 'https://www.codespaces.org/',
+      href: 'https://codespaces.org/',
     },
   },
   {

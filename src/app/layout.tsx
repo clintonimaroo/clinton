@@ -120,7 +120,7 @@ export default function RootLayout({
                 {
                   '@type': 'Organization',
                   name: 'Code Space',
-                  url: 'https://www.codespaces.org',
+                  url: 'https://codespaces.org',
                   roleName: 'Founder',
                   description: 'Nonprofit creating opportunities for young builders across Africa, with 5,000+ members.',
                   foundingDate: '2021',
@@ -202,7 +202,7 @@ export default function RootLayout({
                 'https://www.linkedin.com/in/clintonimaro',
                 'https://x.com/clintonimaro',
                 'https://www.facebook.com/clintonimaroo',
-                'https://www.codespaces.org',
+                'https://codespaces.org',
               ],
             }),
           }}

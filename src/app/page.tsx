@@ -22,7 +22,7 @@ const WORK: Role[] = [
     years: '2021 to now',
     title: 'Founder',
     org: 'Code Space',
-    href: 'https://www.codespaces.org/',
+    href: 'https://codespaces.org/',
     body: (
       <>
         a nonprofit creating opportunities for young builders across africa. what began in 2021 as a whatsapp group is

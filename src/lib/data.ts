@@ -47,7 +47,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
   {
     id: 'code-space',
     company: 'Code Space',
-    href: 'https://www.codespaces.org/',
+    href: 'https://codespaces.org/',
     role: 'Founder',
     description:
       'Building one of the fastest growing communities in Nigeria and across Africa, where Gen Z developers, black builders, founders, and designers come to connect, grow, Impact and discover life-changing opportunities and the next challenge to take on.',
