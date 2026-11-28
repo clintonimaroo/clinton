@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 const themeScript = `(function(){document.documentElement.dataset.theme='light'})()`
 
 const description =
-  'Clinton Imaro is a Nigerian software engineer, ML engineer, startup founder and product leader based in the United States. Co-founded Fathom (2nd place, OpenAI Startup Hackathon). Founded Code Space - 5,000+ members. Former ML Engineer Intern at Apple.'
+  'Engineer and founder building autonomous systems where AI meets the physical world. Founded Code Space (5,000+ young builders across Africa), co-founded Fathom, worked on ML at Apple. Two papers at ITC 2026.'
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro',
@@ -94,23 +94,15 @@ export default function RootLayout({
               alternateName: '@clintonimaro',
               url: 'https://clintonimaro.com',
               email: 'hi@clintonimaro.com',
-              image: [
-                {
-                  '@type': 'ImageObject',
-                  url: 'https://clintonimaro.com/images/profile.JPG',
-                  width: 1200,
-                  height: 630,
-                },
-                {
-                  '@type': 'ImageObject',
-                  url: 'https://clintonimaro.com/images/profile-square.JPG',
-                  width: 400,
-                  height: 400,
-                },
-              ],
-              jobTitle: ['Software Engineer', 'ML Engineer', 'Startup Founder', 'Product Leader'],
+              image: {
+                '@type': 'ImageObject',
+                url: 'https://clintonimaro.com/images/og.jpg',
+                width: 800,
+                height: 800,
+              },
+              jobTitle: ['Engineer', 'Founder', 'Robotics Researcher'],
               description:
-                'Clinton Imaro is a Nigerian software engineer, ML engineer, startup founder and product leader based in the United States. Co-founded Fathom, AI code intelligence for engineering teams. Founded Code Space (5,000+ members). Former ML Engineer Intern at Apple. Undergraduate researcher at Morgan State University. 100+ tech talks worldwide. Published at ITC 2026.',
+                'Engineer and founder building autonomous systems where AI meets the physical world, the perception and planning behind them, and the communities that grow the people who build them. Founded Code Space at 16 and grew it to 5,000+ young builders across Africa, co-founded Fathom, and worked on ML at Apple and cloud at Microsoft. Robotics researcher working on autonomous drones for disaster response, with two papers accepted at ITC 2026.',
               homeLocation: {
                 '@type': 'Place',
                 name: 'United States',
@@ -129,8 +121,15 @@ export default function RootLayout({
                   name: 'Code Space',
                   url: 'https://www.codespaces.org',
                   roleName: 'Founder',
-                  description: 'Nonprofit tech community with 5,000+ members across Africa, organizing one of West Africa\'s largest annual hackathons.',
+                  description: 'Nonprofit creating opportunities for young builders across Africa, with 5,000+ members.',
                   foundingDate: '2021',
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'CEAMLS, Morgan State University',
+                  url: 'https://www.morgan.edu',
+                  roleName: 'Robotics Researcher',
+                  description: 'Autonomous drones for disaster response: perception and planning for UAVs.',
                 },
               ],
               alumniOf: [
@@ -138,13 +137,19 @@ export default function RootLayout({
                   '@type': 'Organization',
                   name: 'Fathom',
                   url: 'https://heyfathom.com',
-                  description: 'Co-founder. An agentic voice-first code intelligence for engineering teams whose first language isn\'t English.',
+                  description: 'Co-founder and CEO. Voice-first code intelligence for engineering teams.',
                 },
                 {
                   '@type': 'Organization',
                   name: 'Apple',
                   url: 'https://www.apple.com',
                   description: 'ML Engineer Intern, 2024',
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'Microsoft',
+                  url: 'https://www.microsoft.com',
+                  description: 'Cloud Engineer Intern, 2023',
                 },
                 {
                   '@type': 'CollegeOrUniversity',
@@ -160,29 +165,24 @@ export default function RootLayout({
                 },
               ],
               award: [
-                'OpenAI Startup Hackathon - 2nd Place',
-                'JPMorgan Data for Good Hackathon 2025 - 1st Place (Python Track)',
-                'Google Hackathon 2024 - 1st Place (AI Track)',
-                'Howard University BisonBytes 2025 - 3rd Place (AI Track)',
-                'Most Influential Tech Personality 2022 - Young Africa Choice Award',
-                'Most Enterprising Youth - I-GLIDE ACE CONCEPT (Nov 2021)',
-                'Youngest Developer from Africa - Google (Mar 2021)',
-                'Best Young Java Developer - Google (Oct 2020)',
-              ],
-              affiliation: [
-                { '@type': 'Organization', name: 'Couchbase' },
-                { '@type': 'Organization', name: 'Google' },
-                { '@type': 'Organization', name: 'Paystack' },
-                { '@type': 'Organization', name: 'AWS' },
-                { '@type': 'Organization', name: 'Alx Africa' },
-                { '@type': 'Organization', name: 'Genztechies' },
-                { '@type': 'Organization', name: 'Wix' },
+                'First place, Morgan TechFest 2026',
+                'First place, Python track, JPMorgan Chase Data for Good 2025',
+                'Second place, OpenAI Startup Hackathon 2025',
+                'Third place, AI track, BisonBytes, Howard University 2025',
+                'First place, AI track, Google Hackathon 2024',
+                'Most Influential Tech Personality, Young Africa Choice Award 2022',
+                'Most Enterprising Youth, I-GLIDE ACE Concept 2021',
+                'Youngest Developer from Africa, Google 2021',
+                'Best Young Java Developer, Google 2020',
               ],
               knowsAbout: [
                 'Software Engineering',
                 'Machine Learning',
                 'Deep Reinforcement Learning',
                 'UAV Navigation',
+                'Robotics',
+                'Computer Vision',
+                'Autonomous Systems',
                 'Voice AI',
                 'Cloud Engineering',
                 'Next.js',
@@ -190,13 +190,8 @@ export default function RootLayout({
                 'TypeScript',
                 'Go',
                 'Community Building',
-                'Developer Advocacy',
                 'Tech Entrepreneurship',
               ],
-              performerIn: {
-                '@type': 'Event',
-                description: '100+ talks at tech events worldwide including Binance, The Future Entrepreneurship, and Google I/O Extended',
-              },
               nationality: {
                 '@type': 'Country',
                 name: 'Nigeria',
@@ -205,9 +200,7 @@ export default function RootLayout({
                 'https://github.com/clintonimaroo',
                 'https://www.linkedin.com/in/clintonimaro',
                 'https://x.com/clintonimaro',
-                'https://www.instagram.com/clintonimaro/',
                 'https://www.facebook.com/clintonimaroo',
-                'https://blog.clintonimaro.com',
                 'https://www.codespaces.org',
               ],
             }),
