@@ -218,9 +218,8 @@ export default function Home() {
 
       <section className="bio">
         <p className="lead">
-          i&apos;m an engineer and founder. i build autonomous systems where ai meets the physical world, the perception
-          and planning behind them, and the communities that grow the people who&apos;ll build them. lately that means
-          drones that can find their own way through fire and flooding.
+          i&apos;m an engineer and founder. i build things where software meets money, and the communities that grow the
+          people who&apos;ll build them.
         </p>
         <p>
           based in the united states. i started shipping as a teenager in nigeria, founded{' '}

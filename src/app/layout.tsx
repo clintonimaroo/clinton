@@ -102,7 +102,7 @@ export default function RootLayout({
               },
               jobTitle: ['Engineer', 'Founder', 'Robotics Researcher'],
               description:
-                'Engineer and founder building autonomous systems where AI meets the physical world, the perception and planning behind them, and the communities that grow the people who build them. Founded Code Space at 16 and grew it to 5,000+ young builders across Africa, co-founded Fathom, and worked on ML at Apple and cloud at Microsoft. Robotics researcher working on autonomous drones for disaster response, with two papers accepted at ITC 2026.',
+                'Engineer and founder. Builds things where software meets money, and the communities that grow the people who will build them. Founded Code Space at 16 and grew it to 5,000+ young builders across Africa, co-founded Fathom, and worked on ML at Apple and cloud at Microsoft. Robotics researcher working on autonomous drones for disaster response, with two papers accepted at ITC 2026.',
               homeLocation: {
                 '@type': 'Place',
                 name: 'United States',
