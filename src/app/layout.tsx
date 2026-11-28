@@ -37,15 +37,9 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: 'https://clintonimaro.com/images/profile.JPG',
+        url: 'https://clintonimaro.com/images/og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Clinton Imaro',
-      },
-      {
-        url: 'https://clintonimaro.com/images/profile-square.JPG',
-        width: 400,
-        height: 400,
         alt: 'Clinton Imaro',
       },
     ],
@@ -59,7 +53,7 @@ export const metadata: Metadata = {
     site: '@clintonimaro',
     title: 'Clinton Imaro',
     description,
-    images: ['https://clintonimaro.com/images/profile.JPG'],
+    images: ['https://clintonimaro.com/images/og.jpg'],
   },
   alternates: {
     canonical: 'https://clintonimaro.com',
