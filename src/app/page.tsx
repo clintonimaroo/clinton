@@ -1,4 +1,7 @@
+// import { Caveat } from 'next/font/google'
 import ShowMore from '@/components/ShowMore'
+
+// const hand = Caveat({ subsets: ['latin'], weight: ['500'] })
 
 const EMAIL = 'hi@clintonimaro.com'
 
@@ -204,6 +207,19 @@ export default function Home() {
         <span className="avatar-wrap">
           <img className="avatar avatar-now" src="/images/avatar-now.jpg" alt="Clinton Imaro" width={88} height={88} />
           <img className="avatar avatar-young" src="/images/avatar.jpg" alt="Clinton Imaro as a child" width={88} height={88} />
+          {/*
+          <span className={`avatar-note ${hand.className}`} aria-hidden="true">
+            <svg viewBox="0 0 44 34" width="44" height="34" fill="none">
+              <path d="M5 30c3-10 10-18 21-21 5-1 9-1 13 0" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              <path d="M32.5 4.5l7 4.6-6.4 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>
+              hover
+              <br />
+              me
+            </span>
+          </span>
+          */}
         </span>
         <div className="intro-text">
           <div className="name-row">

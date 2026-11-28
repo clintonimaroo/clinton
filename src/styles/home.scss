@@ -461,6 +461,31 @@ body {
   &:hover .avatar-young {
     opacity: 1;
   }
+
+  .avatar-note {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--text-secondary);
+    opacity: 0.55;
+    pointer-events: none;
+
+    span {
+      font-size: 22px;
+      line-height: 0.9;
+      margin: 2px 0 0 -6px;
+      text-align: center;
+      transform: rotate(-6deg);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
 }
 
 .home .back {
