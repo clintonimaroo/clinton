@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 const themeScript = `(function(){document.documentElement.dataset.theme='light'})()`
 
 const description =
-  'Engineer and founder building autonomous systems where AI meets the physical world. Founded Code Space (5,000+ young builders across Africa), co-founded Fathom, worked on ML at Apple. Two papers at ITC 2026.'
+  "i build things where software meets money, and the communities that grow the people who'll build them."
 
 export const metadata: Metadata = {
   title: 'Clinton Imaro',
